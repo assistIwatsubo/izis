@@ -1,0 +1,61 @@
+@import url("https://googleapis.com");
+@import "tailwindcss";
+
+:root,
+body {
+  font-family: "M PLUS 2", sans-serif;
+}
+
+@theme {
+  --primary-color: #ae1b6f;
+  --primary-lite-color: #ff82c9;
+}
+
+.izis-text-shadow {
+  text-shadow: 0 0 1rem var(--primary-color);
+}
+.izis-glass-panel {
+  backdrop-filter: blur(0.5rem); /* 背景をぼかす */
+  -webkit-backdrop-filter: blur(8px); /* Safari対策 */
+}
+.izis-primary-button {
+  background: var(--primary-color);
+  color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.25rem rgb(0 0 0 / 20%);
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: background ease 0.2s;
+}
+.izis-primary-button:hover {
+  background: var(--primary-lite-color);
+  text-shadow: 0 0 0.25rem var(--primary-color);
+  cursor: pointer;
+}
+.izis-secondary-button {
+  border: 0.25rem solid var(--primary-color);
+  color: var(--primary-color);
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.25rem rgb(0 0 0 / 20%);
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition:
+    border ease 0.2s,
+    color ease 0.2s;
+  span {
+    display: block;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+}
+.izis-secondary-button:hover {
+  border-color: var(--primary-lite-color);
+  color: var(--primary-lite-color);
+  cursor: pointer;
+}
