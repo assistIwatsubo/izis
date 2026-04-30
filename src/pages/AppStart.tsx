@@ -1,4 +1,4 @@
-import { type GameType } from "../types/game-type";
+import { type GameType } from "../types/types";
 
 type Props = {
   setScene: (scene: "START" | "GAME" | "RESULT") => void;
@@ -27,7 +27,7 @@ function AppStart({ setScene, setActiveGame }: Props) {
         </ol>
       </div>
       <div className="m-auto flex flex-col gap-4 justify-center items-center">
-        <div>
+        <div className="text-(--primary-color)">
           Theme：
           <select
             name="game"
