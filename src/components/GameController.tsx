@@ -1,5 +1,5 @@
-import ToggleUI from "../../components/ToggleUi";
-import { type Problem } from "../../types/types";
+import ToggleUI from "./ToggleUi";
+import { type Problem } from "../types/types";
 
 type Props = {
   problems: Problem[];
@@ -7,13 +7,12 @@ type Props = {
   onFound: (id: string) => void;
 };
 
-function SnowWhite({ foundIds, onFound, problems }: Props) {
+function GameController({ foundIds, onFound, problems }: Props) {
   return (
-    <section>
+    <section className="font-serif">
       {problems.map((p) => {
         const found = foundIds.includes(p.id);
         const UI = p.ui;
-
         return (
           <ToggleUI
             key={p.id}
@@ -28,4 +27,4 @@ function SnowWhite({ foundIds, onFound, problems }: Props) {
   );
 }
 
-export default SnowWhite;
+export default GameController;

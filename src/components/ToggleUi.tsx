@@ -6,11 +6,7 @@ type ToggleProps = {
 };
 
 function ToggleUI({ id, isFound, onFound, ui }: ToggleProps) {
-  return (
-    <div onClick={() => !isFound && onFound(id)} className="cursor-pointer">
-      {ui}
-    </div>
-  );
+  return <div onClick={() => !isFound && onFound(id)}>{ui}</div>;
 }
 
 export default ToggleUI;

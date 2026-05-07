@@ -1,6 +1,6 @@
 // AppGame.tsx
 import { useState } from "react";
-import SnowWhite from "./games/SnowWhite.tsx";
+import GameController from "../components/GameController.tsx";
 import { type Game } from "../types/types.ts";
 import { Icon } from "@iconify/react";
 import { snowWhiteProblems } from "../assets/problems/snow-white";
@@ -42,7 +42,7 @@ function AppGame({ setScene, activeGame }: Props) {
 
       {/* --- ゲーム本体の切り替え --- */}
       {activeGame === "snow-white" && (
-        <SnowWhite
+        <GameController
           foundIds={foundIds}
           onFound={handleFound}
           problems={problems}

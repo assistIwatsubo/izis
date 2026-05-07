@@ -1,8 +1,8 @@
-import { type GameType } from "../types/types";
+import { type Game } from "../types/types";
 
 type Props = {
   setScene: (scene: "START" | "GAME" | "RESULT") => void;
-  setActiveGame: (game: GameType) => void;
+  setActiveGame: (game: Game) => void;
 };
 
 function AppStart({ setScene, setActiveGame }: Props) {
@@ -33,7 +33,7 @@ function AppStart({ setScene, setActiveGame }: Props) {
             name="game"
             id="game"
             className="bg-white/50 rounded-md px-2"
-            onChange={(e) => setActiveGame(e.target.value as GameType)}
+            onChange={(e) => setActiveGame(e.target.value as Game)}
           >
             <option value="snow-white">Snow White</option>
           </select>
