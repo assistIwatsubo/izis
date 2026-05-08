@@ -37,7 +37,7 @@ function AppGame({ setScene, activeGame }: Props) {
             height="20"
           />
         </button>
-        FOUND: {foundIds.length}/20
+        FOUND: {foundIds.length}/{problems.length}
       </nav>
 
       {/* --- ゲーム本体の切り替え --- */}

@@ -9,7 +9,7 @@ type Props = {
 
 function GameController({ foundIds, onFound, problems }: Props) {
   return (
-    <section className="font-serif">
+    <section className="font-serif overflow-hidden">
       {problems.map((p) => {
         const found = foundIds.includes(p.id);
         const UI = p.ui;

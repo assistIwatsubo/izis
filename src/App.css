@@ -9,6 +9,7 @@ body {
 @theme {
   --primary-color: #ae1b6f;
   --primary-lite-color: #ff82c9;
+  --font-noto-sans-jp: "Noto Sans JP", sans-serif;
 }
 
 .izis-text-shadow {
