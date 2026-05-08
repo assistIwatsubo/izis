@@ -1,8 +1,15 @@
+import { type Game } from "../types/types.ts";
+import { problems } from "../types/config.ts";
+
 type Props = {
   setScene: (scene: "START" | "GAME" | "RESULT") => void;
+  activeGame: Game;
+  onFullFound: () => void;
 };
 
-function AppResult({ setScene }: Props) {
+function AppResult({ setScene, activeGame, onFullFound }: Props) {
+  const activeProblems = problems[activeGame as keyof typeof problems];
+
   return (
     <section className="bg-[url('/izis-background.jpg')] bg-cover bg-center min-h-screen flex flex-col justify-around p-4">
       <h1 className="izis-text-shadow text-white izis-text-shadow font-black">
@@ -18,21 +25,19 @@ function AppResult({ setScene }: Props) {
           YOU FOUNDED
         </h3>
         <div className="text-(--primary-color) font-black text-[3rem] text-center">
-          12
-          <small
-            className="text-[1
-          .5rem]"
-          >
-            ／20
-          </small>
+          {activeProblems.length}
+          <small className="text-[1.5rem]">／{activeProblems.length}</small>
         </div>
       </div>
       <div className="m-auto flex justify-center items-center flex-col gap-8">
         <button
           className="izis-primary-button"
-          onClick={() => setScene("GAME")}
+          onClick={() => {
+            onFullFound();
+            setScene("GAME");
+          }}
         >
-          CONTINUE ?
+          SEE FIXED UI ?
         </button>
         <button
           className="izis-secondary-button"

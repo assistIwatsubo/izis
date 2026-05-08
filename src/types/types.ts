@@ -1,3 +1,5 @@
+export type Scene = "START" | "GAME" | "RESULT";
+
 export type Game = "snow-white" | "other-game";
 
 export type Problem = {
