@@ -47,15 +47,16 @@ function AppGame({ setScene, activeGame, foundIds, setFoundIds }: Props) {
         ) : (
           // 通常時の表示
           <>
-            <Icon
-              icon="qlementine-icons:key-return-noframe-16"
-              width="20"
-              height="20"
-            />
             <button
               onClick={() => setScene("START")}
               className="cursor-pointer"
-            ></button>
+            >
+              <Icon
+                icon="qlementine-icons:key-return-noframe-16"
+                width="20"
+                height="20"
+              />
+            </button>
             FOUND: {foundIds.length}/{activeProblems?.length ?? "?"}
           </>
         )}
