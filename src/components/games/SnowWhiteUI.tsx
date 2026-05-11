@@ -383,7 +383,7 @@ export function StoryTelling({ isFound }: { isFound: boolean }) {
     </>
   ) : (
     <img
-      src="./games/snow-white/story-telling.webp"
+      src="./games/snow-white/bg-forest.png"
       alt="森の中の暮らしに疲れ切ったあなたのための「紅の真珠」です！！"
     />
   );

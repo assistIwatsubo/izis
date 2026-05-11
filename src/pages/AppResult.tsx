@@ -20,7 +20,7 @@ function AppResult({ setScene, activeGame, onFullFound }: Props) {
           RESULT
         </h2>
       </div>
-      <div className="m-auto bg-white/25 rounded-lg w-fit px-8 py-4 izis-glass-panel">
+      <div className="m-auto bg-white/25 rounded-lg w-fit px-8 py-4 backdrop-blur-sm">
         <h3 className="text-center font-bold text-[--primary-color] mb-2 text-[1.5rem]">
           YOU FOUNDED
         </h3>
