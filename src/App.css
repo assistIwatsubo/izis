@@ -15,10 +15,7 @@ body {
 .izis-text-shadow {
   text-shadow: 0 0 1rem var(--primary-color);
 }
-.izis-glass-panel {
-  backdrop-filter: blur(0.5rem); /* 背景をぼかす */
-  -webkit-backdrop-filter: blur(8px); /* Safari対策 */
-}
+
 .izis-primary-button {
   background: var(--primary-color);
   color: white;

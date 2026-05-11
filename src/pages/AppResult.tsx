@@ -11,8 +11,8 @@ function AppResult({ setScene, activeGame, onFullFound }: Props) {
   const activeProblems = problems[activeGame as keyof typeof problems];
 
   return (
-    <section className="bg-[url('/izis-background.jpg')] bg-cover bg-center min-h-screen flex flex-col justify-around p-4">
-      <h1 className="izis-text-shadow text-white izis-text-shadow font-black">
+    <section className="bg-[url('/izis-background.webp')] bg-cover bg-center min-h-screen flex flex-col justify-around p-4">
+      <h1 className="izis-text-shadow text-white font-black">
         IZIS <small>- FIX THE UI -</small>
       </h1>
       <div className="py-4">

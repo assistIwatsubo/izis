@@ -31,7 +31,7 @@ function AppGame({ setScene, activeGame, foundIds, setFoundIds }: Props) {
 
   return (
     <section className="relative min-h-screen">
-      <nav className="fixed top-0 right-8 z-50 bg-white/20 py-2 px-4 rounded-b-lg izis-glass-panel text-(--primary-color) border-4 border-t-0 border-(--primary-color) flex gap-4 items-end shadow-lg">
+      <nav className="fixed top-0 right-8 z-50 bg-white/20 py-2 px-4 rounded-b-lg backdrop-blur-sm text-(--primary-color) border-4 border-t-0 border-(--primary-color) flex gap-4 items-end shadow-lg">
         <h1 className="hidden">IZIS</h1>
         {isClear ? (
           // クリア時の表示

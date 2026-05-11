@@ -5,7 +5,7 @@ export function FirstView({ isFound }: { isFound: boolean }) {
     <section className="min-h-screen overflow-hidden flex justify-center items-stretch">
       <h2 className="w-3/5 h-200 scale-x-[-1]">
         <img
-          src="./games/snow-white/good-apple.jpg"
+          src="./games/snow-white/good-apple.webp"
           alt="奇跡のリンゴ「紅の真珠」"
           className="object-cover"
         />
@@ -54,7 +54,7 @@ export function FirstView({ isFound }: { isFound: boolean }) {
       <h2>
         <img
           className="h-120 w-120 object-cover"
-          src="./games/snow-white/bad-apple.jpg"
+          src="./games/snow-white/bad-apple.webp"
           alt="奇跡のリンゴ「紅の真珠」"
         />
       </h2>
@@ -85,7 +85,7 @@ export function Example({ isFound }: { isFound: boolean }) {
               失ってしまっている方
             </p>
             <img
-              src="./games/snow-white/bad-example1.png"
+              src="./games/snow-white/bad-example1.webp"
               alt="疲れ切ってしまった貴女…"
               className="h-48"
             />
@@ -102,7 +102,7 @@ export function Example({ isFound }: { isFound: boolean }) {
               疲れが顔に出てしまいそうな方
             </p>
             <img
-              src="./games/snow-white/bad-example2.png"
+              src="./games/snow-white/bad-example2.webp"
               alt="疲れ切ってしまった貴女…"
               className="h-44"
             />
@@ -119,14 +119,14 @@ export function Example({ isFound }: { isFound: boolean }) {
           いつ追手が来るか不安…
         </p>
         <img
-          src="./games/snow-white/bad-example1.png"
+          src="./games/snow-white/bad-example1.webp"
           alt="疲れ切ってしまった貴女…"
           className="h-48"
         />
       </li>
       <li className="flex items-start justify-center gap-8">
         <img
-          src="./games/snow-white/bad-example2.png"
+          src="./games/snow-white/bad-example2.webp"
           alt="疲れ切ってしまった貴女…"
           className="h-40"
         />
@@ -176,7 +176,7 @@ export function Impact1({ isFound }: { isFound: boolean }) {
         </p>
       </div>
       <img
-        src="./games/snow-white/good-apple2.jpg"
+        src="./games/snow-white/good-apple2.webp"
         alt="紅の真珠は、職人が丹念に磨き上げた特別なリンゴです。"
         className="object-fit w-screen"
       />
@@ -188,7 +188,7 @@ export function Impact1({ isFound }: { isFound: boolean }) {
         紅の真珠（レッド・パールのしずく）
       </p>
       <img
-        src="./games/snow-white/bad-apple2.png"
+        src="./games/snow-white/bad-apple2.webp"
         alt="これを食べたら…ゲヒヒヒヒ～～～～！"
         className="max-w-120 object-fit m-auto py-12"
       />
@@ -198,7 +198,7 @@ export function Impact1({ isFound }: { isFound: boolean }) {
 
 export function Appeal1({ isFound }: { isFound: boolean }) {
   return isFound ? (
-    <div className="px-4 py-36 bg-[url(/games/snow-white/bg-confetti.png)] bg-cover">
+    <div className="px-4 py-36 bg-[url(/games/snow-white/bg-confetti.webp)] bg-cover">
       <div className="flex flex-col gap-12">
         <p className="text-center font-bold text-[2.25rem] bg-white/50 p-2">
           おかげさまで、
@@ -210,7 +210,7 @@ export function Appeal1({ isFound }: { isFound: boolean }) {
         <ul className="flex justify-center items-start gap-12 py-12">
           <li className="max-w-1/3 w-80 flex flex-col justify-center items-center text-[#4B2C2C] text-[2rem] font-bold">
             <img
-              src="./games/snow-white/good-laurel.png"
+              src="./games/snow-white/good-laurel.webp"
               className="absolute opacity-50 h-60"
             />
             世界一効果
@@ -222,7 +222,7 @@ export function Appeal1({ isFound }: { isFound: boolean }) {
           </li>
           <li className="max-w-1/3 w-80 flex flex-col justify-center items-center text-[#4B2C2C] text-[2rem] font-bold">
             <img
-              src="./games/snow-white/good-laurel.png"
+              src="./games/snow-white/good-laurel.webp"
               className="absolute opacity-50 h-60"
             />
             世界一心身
@@ -234,7 +234,7 @@ export function Appeal1({ isFound }: { isFound: boolean }) {
           </li>
           <li className="max-w-1/3 w-80 flex flex-col justify-center items-center text-[#4B2C2C] text-[2rem] font-bold">
             <img
-              src="./games/snow-white/good-laurel.png"
+              src="./games/snow-white/good-laurel.webp"
               className="absolute opacity-50 h-60"
             />
             世界一成分
@@ -251,7 +251,7 @@ export function Appeal1({ isFound }: { isFound: boolean }) {
     <ul className="flex gap-24 justify-center items-center py-18 px-4">
       <li className="flex justify-center items-center p-4">
         <img
-          src="./games/snow-white/bad-dokuro.png"
+          src="./games/snow-white/bad-dokuro.webp"
           className="absolute opacity-50 h-60"
         />
         <span className="text-[#FF0000] text-[3rem] text-center font-bold  relative z-0">
@@ -262,7 +262,7 @@ export function Appeal1({ isFound }: { isFound: boolean }) {
       </li>
       <li className="flex justify-center items-center p-4">
         <img
-          src="./games/snow-white/bad-dokuro.png"
+          src="./games/snow-white/bad-dokuro.webp"
           className="absolute opacity-50 h-60"
         />
         <span className="text-[#FF0000] text-[3rem] text-center font-bold relative z-0">
@@ -325,7 +325,7 @@ export function Supplement({ isFound }: { isFound: boolean }) {
 export function StoryTelling({ isFound }: { isFound: boolean }) {
   return isFound ? (
     <>
-      <div className="w-full bg-[linear-gradient(to_bottom,transparent_70%,white_100%),url(/games/snow-white/bg-forest.jpg)] bg-cover flex items-stretch">
+      <div className="w-full bg-[linear-gradient(to_bottom,transparent_70%,white_100%),url(/games/snow-white/bg-forest.webp)] bg-cover flex items-stretch">
         <p className="m-auto pt-18 pb-28 px-8 bg-white/80 text-center text-[1.5rem] leading-[3]">
           お城からの追手に怯える日々も、
           <br />
@@ -357,7 +357,7 @@ export function StoryTelling({ isFound }: { isFound: boolean }) {
           新しい物語を始めてください。
         </p>
       </div>
-      <div className="px-12 py-36 bg-[url(/games/snow-white/bg-confetti.png)] bg-cover">
+      <div className="px-12 py-36 bg-[url(/games/snow-white/bg-confetti.webp)] bg-cover">
         <p className="text-center text-[2rem] font-medium py-12 whitespace-nowrap bg-white/50 px-4 leading-loose">
           今なら「紅の真珠」が
           <br />
@@ -383,7 +383,7 @@ export function StoryTelling({ isFound }: { isFound: boolean }) {
     </>
   ) : (
     <img
-      src="./games/snow-white/story-telling.png"
+      src="./games/snow-white/story-telling.webp"
       alt="森の中の暮らしに疲れ切ったあなたのための「紅の真珠」です！！"
     />
   );
@@ -403,7 +403,7 @@ export function UserVoices({ isFound }: { isFound: boolean }) {
               森の美少女 S様（永遠の10代）
             </span>
           </div>
-          <img src="./games/snow-white/girl_15.png" className="w-24" />
+          <img src="./games/snow-white/girl_15.webp" className="w-24" />
         </li>
         <li className="flex justify-center items-center gap-8 bg-white rounded-lg shadow-md px-8 py-4">
           <div className="max-w-120">
@@ -414,7 +414,7 @@ export function UserVoices({ isFound }: { isFound: boolean }) {
               丁寧な暮らしをしたい女子 B様（推定20代）
             </span>
           </div>
-          <img src="./games/snow-white/girl_18.png" className="w-24" />
+          <img src="./games/snow-white/girl_18.webp" className="w-24" />
         </li>
         <li className="flex justify-center items-center gap-8 bg-white rounded-lg shadow-md px-8 py-4">
           <div className="max-w-120">
@@ -425,7 +425,7 @@ export function UserVoices({ isFound }: { isFound: boolean }) {
               7人の同居人と暮らす苦労人 C様（年齢非公開）
             </span>
           </div>
-          <img src="./games/snow-white/girl_24.png" className="w-24" />
+          <img src="./games/snow-white/girl_24.webp" className="w-24" />
         </li>
       </ul>
     </div>
@@ -442,7 +442,7 @@ export function UserVoices({ isFound }: { isFound: boolean }) {
               森の美少女 S様（永遠の10代）
             </span>
           </div>
-          <img src="./games/snow-white/mob-icon.png" className="w-24" />
+          <img src="./games/snow-white/mob-icon.webp" className="w-24" />
         </li>
         <li className="flex justify-center items-center gap-8 bg-white rounded-lg shadow-md px-8 py-4">
           <div className="max-w-120">
@@ -453,7 +453,7 @@ export function UserVoices({ isFound }: { isFound: boolean }) {
               丁寧な暮らしをしたい女子 B様（推定20代）
             </span>
           </div>
-          <img src="./games/snow-white/mob-icon.png" className="w-24" />
+          <img src="./games/snow-white/mob-icon.webp" className="w-24" />
         </li>
         <li className="flex justify-center items-center gap-8 bg-white rounded-lg shadow-md px-8 py-4">
           <div className="max-w-120">
@@ -464,7 +464,7 @@ export function UserVoices({ isFound }: { isFound: boolean }) {
               7人の同居人と暮らす苦労人 C様（年齢非公開）
             </span>
           </div>
-          <img src="./games/snow-white/mob-icon.png" className="w-24" />
+          <img src="./games/snow-white/mob-icon.webp" className="w-24" />
         </li>
       </ul>
     </div>
@@ -473,7 +473,7 @@ export function UserVoices({ isFound }: { isFound: boolean }) {
 
 export function Appeal2({ isFound }: { isFound: boolean }) {
   return isFound ? (
-    <div className="px-12 py-36 bg-[url(/games/snow-white/bg-confetti.png)] bg-cover">
+    <div className="px-12 py-36 bg-[url(/games/snow-white/bg-confetti.webp)] bg-cover">
       <p className="text-center text-[3rem] font-bold py-12 whitespace-nowrap bg-white/50 px-4">
         さあ、あなたも「紅の真珠」で
         <br />
@@ -608,7 +608,7 @@ export function Appeal3({ isFound }: { isFound: boolean }) {
     <>
       <div className="relative pt-24 pb-60 w-full overflow-hidden">
         <div
-          className="absolute inset-0 top-1/3 -z-10 bg-[url(/games/snow-white/bg-end.jpg)] bg-cover bg-top"
+          className="absolute inset-0 top-1/3 -z-10 bg-[url(/games/snow-white/bg-end.webp)] bg-cover bg-top"
           style={{
             maskImage: "linear-gradient(to bottom, transparent, white 70%)",
             WebkitMaskImage:

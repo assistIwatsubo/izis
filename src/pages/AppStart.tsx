@@ -7,7 +7,7 @@ type Props = {
 
 function AppStart({ setScene, setActiveGame }: Props) {
   return (
-    <section className="bg-[url('/izis-background.jpg')] bg-cover bg-center min-h-screen flex flex-col justify-around p-4">
+    <section className="bg-[url('/izis-background.webp')] bg-cover bg-center min-h-screen flex flex-col justify-around p-4">
       <div className="py-4">
         <h1 className="leading-tight text-center text-[10rem] font-black text-white izis-text-shadow">
           IZIS
@@ -16,7 +16,7 @@ function AppStart({ setScene, setActiveGame }: Props) {
           - FIX THE UI -
         </p>
       </div>
-      <div className="m-auto bg-black/25 rounded-lg w-fit px-8 py-4 izis-glass-panel">
+      <div className="m-auto bg-black/25 rounded-lg w-fit px-8 py-4 backdrop-blur-sm">
         <h2 className="text-center font-bold text-white mb-6 text-[1.5rem] ">
           HOW TO PLAY
         </h2>
