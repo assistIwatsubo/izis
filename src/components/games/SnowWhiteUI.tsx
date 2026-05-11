@@ -198,7 +198,7 @@ export function Impact1({ isFound }: { isFound: boolean }) {
 
 export function Appeal1({ isFound }: { isFound: boolean }) {
   return isFound ? (
-    <div className="px-4 py-36 bg-[url(./games/snow-white/bg-confetti.png)] bg-cover">
+    <div className="px-4 py-36 bg-[url(/games/snow-white/bg-confetti.png)] bg-cover">
       <div className="flex flex-col gap-12">
         <p className="text-center font-bold text-[2.25rem] bg-white/50 p-2">
           おかげさまで、
@@ -357,7 +357,7 @@ export function StoryTelling({ isFound }: { isFound: boolean }) {
           新しい物語を始めてください。
         </p>
       </div>
-      <div className="px-12 py-36 bg-[url(./games/snow-white/bg-confetti.png)] bg-cover">
+      <div className="px-12 py-36 bg-[url(/games/snow-white/bg-confetti.png)] bg-cover">
         <p className="text-center text-[2rem] font-medium py-12 whitespace-nowrap bg-white/50 px-4 leading-loose">
           今なら「紅の真珠」が
           <br />
@@ -473,7 +473,7 @@ export function UserVoices({ isFound }: { isFound: boolean }) {
 
 export function Appeal2({ isFound }: { isFound: boolean }) {
   return isFound ? (
-    <div className="px-12 py-36 bg-[url(./games/snow-white/bg-confetti.png)] bg-cover">
+    <div className="px-12 py-36 bg-[url(/games/snow-white/bg-confetti.png)] bg-cover">
       <p className="text-center text-[3rem] font-bold py-12 whitespace-nowrap bg-white/50 px-4">
         さあ、あなたも「紅の真珠」で
         <br />
@@ -608,7 +608,7 @@ export function Appeal3({ isFound }: { isFound: boolean }) {
     <>
       <div className="relative pt-24 pb-60 w-full overflow-hidden">
         <div
-          className="absolute inset-0 top-1/3 -z-10 bg-[url(./games/snow-white/bg-end.jpg)] bg-cover bg-top"
+          className="absolute inset-0 top-1/3 -z-10 bg-[url(/games/snow-white/bg-end.jpg)] bg-cover bg-top"
           style={{
             maskImage: "linear-gradient(to bottom, transparent, white 70%)",
             WebkitMaskImage:
