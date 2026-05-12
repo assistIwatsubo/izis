@@ -1,41 +1,68 @@
 import { useState } from "react";
 
+export function GoodCTAButton() {
+  return (
+    <a className="bg-linear-to-b from-[#E53131] to-[#991919] block w-full cursor-pointer px-4 py-6 lg:py-12 lg:px-8 rounded-4xl text-center shadow-md shadow-gray-400 max-w-300 m-auto">
+      <span className="font-bold bg-clip-text text-transparent bg-linear-to-b from-[#F8E855] via-[#FCFE97] to-[#DEA83D] text-center text-[2rem] md:text-[2.5rem] lg:text-[4.5rem]">
+        「紅の真珠」を
+        <br className="md:hidden" />
+        今すぐ手に入れる
+      </span>
+    </a>
+  );
+}
+
 export function FirstView({ isFound }: { isFound: boolean }) {
   return isFound ? (
-    <section className="relative min-h-screen lg:flex lg:justify-center lg:items-stretch">
-      <h2 className="absolute inset-0 z-0 lg:relative lg:inset-auto md:w-full lg:w-3/5 lg:h-200 scale-x-[-1]">
+    <section className="relative min-h-screen flex justify-center items-stretch lg:max-h-200">
+      <h2 className="absolute inset-0 z-0 lg:relative lg:inset-auto md:w-full lg:w-3/5 lg:overflow-hidden scale-x-[-1]">
         <img
           src="./games/snow-white/good-apple.webp"
           alt="奇跡のリンゴ「紅の真珠」"
           className="w-full h-full object-cover"
         />
       </h2>
-      <div className="z-10 sticky lg:flex-1 lg:relative min-h-screen ">
-        <p className="absolute right-0 lg:right-24 top-16 text-[2rem] lg:text-[4rem] font-bold bg-white p-4 lg:px-8 py-4 lg:whitespace-nowrap">
+      <div className="flex flex-col justify-between relative z-1 pt-20 flex-1">
+        <p className="text-[2rem] lg:text-[4rem] font-bold bg-white p-4 lg:px-8 py-4 lg:whitespace-nowrap relative left-6 lg:-translate-x-40">
           貴女の毎日を変える。
         </p>
-        <p className="absolute bottom-0 right-0 text-center md:text-right text-[1.25rem] font-medium py-18 px-8 text-black text-shadow-white bg-[linear-gradient(to_top,white_25%,transparent_100%)]">
+        <p className="text-center md:text-right text-[1.25rem] font-medium p-8 text-black text-shadow-white bg-[linear-gradient(to_top,white_25%,transparent_100%)] leading-loose bg-white/25 mt-8">
           想像してみてください。
           <br />
           <br />
           一口かじった、その瞬間。
           <br />
-          身体の奥底からエネルギーが満ちていく。
+          身体の奥底から
+          <br className="md:hidden" />
+          エネルギーが満ちていく。
           <br />
+          <br className="md:hidden" />
           重かったまぶたは軽く、
           <br />
-          さっきまでの憂鬱は嘘のように消え去る。
+          さっきまでの憂鬱は
+          <br className="md:hidden" />
+          嘘のように消え去る。
           <br />
           <br />
           「何でもできそう」
           <br />
           <br />
-          そんな確信に満ちた、最高の心地よさ。
+          そんな確信に満ちた、
+          <br className="md:hidden" />
+          最高の心地よさ。
           <br />
-          この林檎はあなたのこれからの毎日を 鮮やかに塗り替える。
+          この林檎は
+          <br className="md:hidden" />
+          あなたのこれからの毎日を
+          <br className="md:hidden" />
+          鮮やかに塗り替える。
           <br />
           <br />
-          さあ、新しい人生のための一口を、ここで。
+          さあ、
+          <br className="md:hidden" />
+          新しい人生のための一口を、
+          <br className="md:hidden" />
+          ここで。
         </p>
       </div>
     </section>
@@ -68,7 +95,7 @@ export function FirstView({ isFound }: { isFound: boolean }) {
 
 export function Example({ isFound }: { isFound: boolean }) {
   return isFound ? (
-    <div className="px-8 py-18 lg:p-18">
+    <div className="px-4 md:px-8 py-18 lg:p-18">
       <div className="py-8 px-4 lg:p-18 bg-[#ECECEC] flex flex-col gap-4 lg:gap-12">
         <p className="text-center font-bold text-[1.5rem] lg:text-[2rem]">
           申し訳ございません。
@@ -148,15 +175,16 @@ export function Modal1({ isFound }: { isFound: boolean }) {
   return isFound ? (
     <></>
   ) : (
-    <div className="absolute lg:w-fit w-9/10 top-300 left-1/2 -translate-x-1/2 lg:whitespace-nowrap">
-      <div className="bg-black text-[#E6FF45] flex flex-col gap-8 py-8 px-12 justify-start items-center">
-        <h3 className="text-[3rem] font-bold text-center">
+    <div className="absolute lg:w-fit w-9/10 top-300 left-1/2 -translate-x-1/2 lg:whitespace-nowrap z-10">
+      <div className="bg-black text-[#E6FF45] flex flex-col gap-8 p-4 py-8 sm:px-12 justify-start items-center">
+        <h3 className="text-[1.75rem] sm:text-[3rem] font-bold text-center">
           お客様限定セール！！
         </h3>
-        <p className="text-[1.5rem] font-bold">
-          今なら<span className="text-[3rem]">効果30％増</span>の<br />
-          <span className="text-[3rem]">特別版</span>が
-          <span className="text-[3rem]">購入可能</span>です！
+        <p className="text-[1.5rem] font-bold text-center">
+          今なら<span className="text-[2rem] sm:text-[3rem]">効果30％増</span>の
+          <br />
+          <span className="text-[2rem] sm:text-[3rem]">特別版</span>が
+          <span className="text-[2rem] sm:text-[3rem]">購入可能</span>です！
         </p>
         <a className="bg-[#FF0004] cursor-pointer p-4 m-auto text-center w-fit font-black text-[2rem] whitespace-nowrap">
           今すぐ購入する！
@@ -168,14 +196,19 @@ export function Modal1({ isFound }: { isFound: boolean }) {
 
 export function Impact1({ isFound }: { isFound: boolean }) {
   return isFound ? (
-    <div className="p-4 relative">
-      <div className="absolute left-1/2 -translate-x-1/2 w-full bg-white/50">
-        <p className="text-center font-bold text-[3rem] pt-16">
-          あなたの毎日を変える、一粒限りの魔法。
+    <div className="p-4 lg:relative">
+      <div className="sm:absolute sm:left-1/2 sm:-translate-x-1/2 w-full bg-white/50">
+        <p className="text-center font-bold text-[2rem] sm:text-[3rem] pt-16 leading-loose">
+          あなたの毎日を変える、
+          <br className="lg:hidden" />
+          一粒限りの魔法。
         </p>
-        <p className="text-center font-black text-[3rem] p-4">
+        <p className="text-center font-black text-[2rem] sm:text-[3rem] p-4">
           それがこの
-          <span className="text-[3.5rem] text-[#FF0000]">紅の真珠</span>
+          <br className="md:hidden" />
+          <span className="text-[2.5rem] sm:text-[3.5rem] text-[#FF0000]">
+            紅の真珠
+          </span>
           です。
         </p>
       </div>
@@ -196,7 +229,7 @@ export function Impact1({ isFound }: { isFound: boolean }) {
       <img
         src="./games/snow-white/bad-apple2.webp"
         alt="これを食べたら…ゲヒヒヒヒ～～～～！"
-        className="max-w-120 object-fit m-auto py-4 md:py-12"
+        className="w-full max-w-120 object-fit m-auto py-4 md:py-12"
       />
     </div>
   );
@@ -204,14 +237,17 @@ export function Impact1({ isFound }: { isFound: boolean }) {
 
 export function Appeal1({ isFound }: { isFound: boolean }) {
   return isFound ? (
-    <div className="px-4 py-36 bg-[url(/games/snow-white/bg-confetti.webp)] bg-cover">
+    <div className="px-4 py-24 md:py-36 bg-[url(/games/snow-white/bg-confetti.webp)] bg-cover">
       <div className="flex flex-col gap-12">
-        <p className="text-center font-bold text-[2.25rem] bg-white/50 p-2">
+        <p className="text-center font-bold text-[1.75rem] md:text-[2.25rem] bg-white/50 p-2 leading-loose">
           おかげさまで、
           <br />
-          かの<span className="text-[2.625rem]">魔法の鏡から</span>も
-          <span className="text-[2.625rem]">お墨付き</span>
-          をいただいております！
+          かの
+          <span className="text-[2rem] md:text-[2.625rem]">魔法の鏡から</span>も
+          <br className="msm:hidden" />
+          <span className="text-[2rem] md:text-[2.625rem]">お墨付き</span>
+          を<br className="md:hidden" />
+          いただいております！
         </p>
         <ul className="flex flex-col lg:flex-row justify-center items-start gap-30 lg:gap-12 py-12">
           <li className="lg:max-w-1/3 w-80 m-auto flex flex-col justify-center items-center text-[#4B2C2C] text-[2rem] font-bold">
@@ -260,7 +296,7 @@ export function Appeal1({ isFound }: { isFound: boolean }) {
           src="./games/snow-white/bad-dokuro.webp"
           className="absolute opacity-50 h-56 lg:h-60"
         />
-        <span className="text-[#FF0000] text-[3rem] text-center font-bold  relative z-0">
+        <span className="text-[#FF0000] text-[2.5rem] sm:text-[3rem] text-center font-bold relative z-0">
           一瞬で
           <br />
           効果を実感
@@ -271,7 +307,7 @@ export function Appeal1({ isFound }: { isFound: boolean }) {
           src="./games/snow-white/bad-dokuro.webp"
           className="absolute opacity-50 h-56 lg:h-60"
         />
-        <span className="text-[#FF0000] text-[3rem] text-center font-bold relative z-0">
+        <span className="text-[#FF0000] text-[2.5rem] sm:text-[3rem] text-center font-bold relative z-0">
           信頼の
           <br />
           王室御用達
@@ -283,21 +319,17 @@ export function Appeal1({ isFound }: { isFound: boolean }) {
 
 export function Conversion1({ isFound }: { isFound: boolean }) {
   return isFound ? (
-    <div className="w-full pt-36 px-4 lg:px-12">
-      <p className="text-[1.5rem] lg:text-[2rem] font-medium text-center pb-24 lg:pb-36 leading-loose">
+    <div className="w-full pt-24 md:pt-36 px-8 lg:px-12">
+      <p className="text-[1.5rem] md:text-[2rem] font-medium text-center pb-18 md:pb-36 leading-loose">
         七人のために頑張るあなたへ。
         <br />
         朝一番の魔法を贈りませんか？
       </p>
-      <a className="bg-linear-to-b from-[#E53131] to-[#991919] block w-full cursor-pointer p-8 lg:py-12 lg:px-8 rounded-4xl text-center shadow-md shadow-gray-400 max-w-300 m-auto">
-        <span className="font-bold bg-clip-text text-transparent bg-linear-to-b from-[#F8E855] via-[#FCFE97] to-[#DEA83D] text-center text-[3rem] lg:text-[4.5rem]">
-          「紅の真珠」を今すぐ手に入れる
-        </span>
-      </a>
+      <GoodCTAButton />
     </div>
   ) : (
     <div className="w-full pb-4 pt-12">
-      <a className="bg-[#FF0000] block w-full cursor-pointer py-8 md:py-12 px-8 text-center text-[3rem] md:text-[4.5rem] text-[#E6FF45] text-shadow-lg font-bold">
+      <a className="bg-[#FF0000] block w-full cursor-pointer py-4 sm:py-12 px-8 text-center text-[2.5rem] sm:text-[3rem] md:text-[4.5rem] text-[#E6FF45] text-shadow-lg font-bold">
         今すぐ<span className="text-black">永遠</span>を
         <br className="lg:hidden" />
         手に入れる
@@ -308,7 +340,7 @@ export function Conversion1({ isFound }: { isFound: boolean }) {
 
 export function Supplement({ isFound }: { isFound: boolean }) {
   return isFound ? (
-    <div className="flex justify-center pt-8 px-4 pb-40">
+    <div className="flex justify-center pt-8 px-8 pb-40">
       <p className="font-medium">
         ※一度食べたら二度と起きられない可能性があります。
         <br />
@@ -377,21 +409,18 @@ export function StoryTelling({ isFound }: { isFound: boolean }) {
           新しい物語を始めてください。
         </p>
       </div>
-      <div className="px-12 py-36 bg-[url(/games/snow-white/bg-confetti.webp)] bg-cover">
+      <div className="px-4 md:px-12 py-24 md:py-36 bg-[url(/games/snow-white/bg-confetti.webp)] bg-cover">
         <p className="text-center text-[2rem] font-medium py-12 whitespace-nowrap bg-white/50 px-4 leading-loose">
           今なら「紅の真珠」が
           <br />
           <span className="font-bold text-[2.25rem]">
-            送料無料！ <br className="md:hidden" />
+            送料無料！
+            <br className="md:hidden" />
             即日お届け！
           </span>
         </p>
-        <a className="bg-linear-to-b from-[#E53131] to-[#991919] block w-full cursor-pointer p-8 lg:py-12 lg:px-8 rounded-4xl text-center shadow-md shadow-gray-400 max-w-300 m-auto">
-          <span className="font-bold bg-clip-text text-transparent bg-linear-to-b from-[#F8E855] via-[#FCFE97] to-[#DEA83D] text-center text-[3rem] lg:text-[4.5rem]">
-            「紅の真珠」を今すぐ手に入れる
-          </span>
-        </a>
-        <div className="flex justify-center py-8">
+        <GoodCTAButton />
+        <div className="flex justify-center py-8 px-4">
           <p className="font-medium">
             ※一度食べたら二度と起きられない可能性があります。
             <br />
@@ -459,7 +488,7 @@ export function UserVoices({ isFound }: { isFound: boolean }) {
       </ul>
     </div>
   ) : (
-    <div className="w-full p-12 pb-18 bg-[#C87676]">
+    <div className="w-full p-8 pb-18 bg-[#C87676]">
       <h3 className="font-bold text-[2.5rem] md:text-[3rem] text-center py-12 md:pt-8">
         ご利用者の声
       </h3>
@@ -504,22 +533,25 @@ export function UserVoices({ isFound }: { isFound: boolean }) {
 
 export function Appeal2({ isFound }: { isFound: boolean }) {
   return isFound ? (
-    <div className="px-12 py-36 bg-[url(/games/snow-white/bg-confetti.webp)] bg-cover">
-      <p className="text-center text-[3rem] font-bold py-12 whitespace-nowrap bg-white/50 px-4">
-        さあ、あなたも「紅の真珠」で
+    <div className="py-20 px-4 md:px-12 md:py-36 bg-[url(/games/snow-white/bg-confetti.webp)] bg-cover">
+      <p className="text-center text-[2rem] md:text-[2.5rem] lg:text-[3rem] font-bold leading-loose py-12 lg:whitespace-nowrap bg-white/50 px-4">
+        さあ、あなたも
+        <br className="md:hidden" />
+        「紅の真珠」で
         <br />
-        きらめく毎日を手に入れましょう。
+        きらめく毎日を
+        <br className="md:hidden" />
+        手に入れましょう。
       </p>
-      <p className="pt-12 text-center pb-4 text-[2.25rem] font-bold">
-        <span className="text-[2.625rem]">送料無料・即日お届け</span>は
-        <span className="text-[2.625rem]">今だけ</span>です！
-      </p>
-      <a className="bg-linear-to-b from-[#E53131] to-[#991919] block w-full cursor-pointer py-12 px-8 rounded-4xl text-center shadow-md shadow-gray-400 max-w-300 m-auto">
-        <span className="font-bold bg-clip-text text-transparent bg-linear-to-b from-[#F8E855] via-[#FCFE97] to-[#DEA83D] text-center text-[4.5rem]">
-          「紅の真珠」を今すぐ手に入れる
+      <p className="pt-12 px-4 text-center pb-8 text-[1.75rem] md:text-[2.25rem] font-bold">
+        <span className="text-[2rem] md:text-[2.625rem] leading-loose">
+          送料無料・即日お届け
         </span>
-      </a>
-      <div className="flex justify-center py-8">
+        は<br className="lg:hidden" />
+        <span className="text-[2rem] md:text-[2.625rem]">今だけ</span>です！
+      </p>
+      <GoodCTAButton />
+      <div className="flex justify-center py-8 px-4">
         <p className="font-medium">
           ※一度食べたら二度と起きられない可能性があります。
           <br />
@@ -637,7 +669,7 @@ export function Faq({ isFound }: { isFound: boolean }) {
 export function Appeal3({ isFound }: { isFound: boolean }) {
   return isFound ? (
     <>
-      <div className="relative pt-24 pb-60 w-full overflow-hidden px-4">
+      <div className="relative pt-24 pb-60 w-full overflow-hidden px-8">
         <div
           className="absolute inset-0 top-1/3 -z-10 bg-[url(/games/snow-white/bg-end.webp)] bg-cover bg-top"
           style={{
@@ -646,19 +678,12 @@ export function Appeal3({ isFound }: { isFound: boolean }) {
               "linear-gradient(to bottom, transparent, white 20%)",
           }}
         />
-        <p className="text-center font-bold text-[2rem] md:text-[3rem]">
+        <p className="text-center font-bold text-[2rem] md:text-[3rem] pb-8">
           <span className="text-[#FF0004]">送料無料・即日お届け</span>
           <br className="lg:hidden" />
           は今だけです！
         </p>
-        <a className="bg-linear-to-b from-[#E53131] to-[#991919] block w-full cursor-pointer p-8 md:py-12 px-8 rounded-4xl text-center shadow-md shadow-gray-400 max-w-300 mx-auto my-24">
-          <span
-            className="font-bold bg-clip-text text-transparent bg-linear-to-b from-[#F8E855] via-[#FCFE97] to-[#DEA83D] text-center text-[3rem]
-           lg:text-[4.5rem]"
-          >
-            「紅の真珠」を今すぐ手に入れる
-          </span>
-        </a>
+        <GoodCTAButton />
       </div>
       <footer className="bg-[#FFC0C0] text-center text-[0.75rem] text-white p-4">
         合同会社魔法の鏡コーポレーション ｜ お問い合わせ ｜ アクセス
@@ -667,8 +692,8 @@ export function Appeal3({ isFound }: { isFound: boolean }) {
   ) : (
     <>
       <div className="pt-12 pb-12 px-4">
-        <a className="bg-linear-to-b from-[#E53131] to-[#991919] block w-full cursor-pointer py-8 px-4 rounded-4xl text-center m-auto text-[#00FF0D] text-[3rem] lg:text-[5rem] font-bold">
-          <span className="text-[#FF45FF] block text-[1.5rem] lg:text-[2rem] mb-4">
+        <a className="bg-linear-to-b from-[#E53131] to-[#991919] block w-full cursor-pointer py-8 px-4 rounded-4xl text-center m-auto text-[#00FF0D] text-[2.5rem] md:text-[3rem] lg:text-[5rem] font-bold">
+          <span className="text-[#FF45FF] block text-[1.25rem] md:text-[1.5rem] lg:text-[2rem] mb-4">
             ＼これが<b className="text-[#9000FF]">最後</b>のチャンスです！／
           </span>
           今すぐ、<b className="text-[#E6FF45]">幸せ</b>を噛みしめる

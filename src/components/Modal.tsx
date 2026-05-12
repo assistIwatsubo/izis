@@ -7,7 +7,7 @@ type ModalProps = {
 
 function Modal({ children, onClose }: ModalProps) {
   return (
-    <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4">
+    <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-99">
       <div className="bg-white rounded-lg relative whitespace-pre-line">
         <button
           onClick={onClose}

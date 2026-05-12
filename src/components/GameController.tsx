@@ -25,7 +25,7 @@ function GameController({ foundIds, onFound, problems, isDebug }: Props) {
         const found = isDebug ? !!debugStates[p.id] : foundIds.includes(p.id);
         const UI = p.ui;
         return (
-          <div className="relative">
+          <>
             <ToggleUI
               key={p.id}
               id={p.id}
@@ -41,7 +41,7 @@ function GameController({ foundIds, onFound, problems, isDebug }: Props) {
                 addClass="absolute left-4 top-2 z-1"
               />
             )}
-          </div>
+          </>
         );
       })}
     </section>
