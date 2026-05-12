@@ -10,8 +10,8 @@ function App() {
   const [scene, setScene] = useState<Scene>("START");
   const [activeGame, setActiveGame] = useState<Game>("snow-white");
   const [foundIds, setFoundIds] = useState<string[]>([]);
-
   const activeProblems = problems[activeGame as keyof typeof problems];
+  const [isDebug, setIsDebug] = useState<boolean>(false);
 
   const handleFullFound = () => {
     const allIds = activeProblems.map((p) => p.id);
@@ -29,6 +29,8 @@ function App() {
             setScene(s);
           }}
           setActiveGame={setActiveGame}
+          isDebug={isDebug}
+          setIsDebug={setIsDebug}
         />
       )}
       {scene === "GAME" && (
@@ -37,6 +39,7 @@ function App() {
           activeGame={activeGame}
           foundIds={foundIds}
           setFoundIds={setFoundIds}
+          isDebug={isDebug}
         />
       )}
       {scene === "RESULT" && (

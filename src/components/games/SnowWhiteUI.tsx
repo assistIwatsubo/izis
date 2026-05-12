@@ -2,19 +2,19 @@ import { useState } from "react";
 
 export function FirstView({ isFound }: { isFound: boolean }) {
   return isFound ? (
-    <section className="min-h-screen overflow-hidden flex justify-center items-stretch">
-      <h2 className="w-3/5 h-200 scale-x-[-1]">
+    <section className="relative min-h-screen lg:flex lg:justify-center lg:items-stretch">
+      <h2 className="absolute inset-0 z-0 lg:relative lg:inset-auto md:w-full lg:w-3/5 lg:h-200 scale-x-[-1]">
         <img
           src="./games/snow-white/good-apple.webp"
           alt="奇跡のリンゴ「紅の真珠」"
-          className="object-cover"
+          className="w-full h-full object-cover"
         />
       </h2>
-      <div className="flex-1 relative min-h-screen">
-        <p className="absolute right-24 top-16 text-[4rem] font-bold bg-white px-8 py-4 whitespace-nowrap">
+      <div className="z-10 sticky lg:flex-1 lg:relative min-h-screen ">
+        <p className="absolute right-0 lg:right-24 top-16 text-[2rem] lg:text-[4rem] font-bold bg-white p-4 lg:px-8 py-4 lg:whitespace-nowrap">
           貴女の毎日を変える。
         </p>
-        <p className="absolute bottom-0 right-0 text-right text-[1.25rem] font-light py-18 px-4">
+        <p className="absolute bottom-0 right-0 text-center md:text-right text-[1.25rem] font-medium py-18 px-8 text-black text-shadow-white bg-[linear-gradient(to_top,white_25%,transparent_100%)]">
           想像してみてください。
           <br />
           <br />
@@ -40,10 +40,14 @@ export function FirstView({ isFound }: { isFound: boolean }) {
       </div>
     </section>
   ) : (
-    <section className="bg-red-500 py-12 px-4 flex justify-center">
+    <section className="flex-col lg:flex-row bg-red-500 py-12 px-4 flex justify-center">
       <div className="flex flex-col gap-8 items-start">
-        <p className="text-[4rem] font-bold">究極の眠りへ、誘う一口。</p>
-        <p className="text-[#9000FF] text-[3rem] font-bold leading-snug">
+        <p className="text-[3rem] lg:text-[4rem] font-bold">
+          究極の眠りへ、
+          <br className="lg:hidden" />
+          誘う一口。
+        </p>
+        <p className="text-[#9000FF] text-[2rem] lg:text-[3rem] font-bold leading-snug">
           今、話題の
           <br />
           『紅の真珠』が、
@@ -64,24 +68,24 @@ export function FirstView({ isFound }: { isFound: boolean }) {
 
 export function Example({ isFound }: { isFound: boolean }) {
   return isFound ? (
-    <div className="p-18">
-      <div className="p-18 bg-[#ECECEC] flex flex-col gap-12">
-        <p className="text-center font-bold text-[2rem]">
+    <div className="px-8 py-18 lg:p-18">
+      <div className="py-8 px-4 lg:p-18 bg-[#ECECEC] flex flex-col gap-4 lg:gap-12">
+        <p className="text-center font-bold text-[1.5rem] lg:text-[2rem]">
           申し訳ございません。
         </p>
-        <p className="text-center font-black text-[3rem] pt-4">
+        <p className="text-center font-black text-[1.75rem] lg:text-[3rem] pt-4">
           当てはまらない方には、お売りできません。
         </p>
-        <ol className="flex justify-center items-start gap-8 pt-12">
-          <li className="flex flex-col items-center justify-start gap-12 relative">
+        <ol className="flex flex-col lg:flex-row justify-center items-start gap-24 lg:gap-8 pt-12">
+          <li className="flex flex-col items-center justify-start gap-8 md:gap-12 relative m-auto">
             <span className="flex justify-center items-center w-16 h-16 rounded-full bg-white text-[#989898] font-noto-sans-jp font-bold border-8 border-[#ECECEC] text-[2rem] absolute -top-8 left-1/2 -translate-x-1/2 text-center pb-1">
               1
             </span>
-            <p className="bg-white p-12 pb-8 rounded-md font-semibold text-[1.5rem] border-3 border-dashed border-[#ECECEC]">
+            <p className="bg-white pt-10 p-4 md:p-12 md:pb-8 rounded-md font-semibold text-[1.25rem] md:text-[1.5rem] border-3 border-dashed border-[#ECECEC]">
               七人分の家事と騒がしさに追われ、
-              <br />
+              <br className="hidden md:block" />
               自分を労わる時間も心の余裕も
-              <br />
+              <br className="hidden md:block" />
               失ってしまっている方
             </p>
             <img
@@ -90,15 +94,15 @@ export function Example({ isFound }: { isFound: boolean }) {
               className="h-48"
             />
           </li>
-          <li className="flex flex-col items-center justify-start gap-12 relative">
+          <li className="flex flex-col items-center justify-start gap-12 relative m-auto">
             <span className="flex justify-center items-center w-16 h-16 rounded-full bg-white text-[#989898] font-noto-sans-jp font-bold border-8 border-[#ECECEC] text-[2rem] absolute -top-8 left-1/2 -translate-x-1/2 text-center pb-1">
               2
             </span>
-            <p className="bg-white p-12 pb-8 rounded-md font-semibold text-[1.5rem] border-3 border-dashed border-[#ECECEC]">
+            <p className="bg-white pt-10 p-4 md:p-12 md:pb-8 rounded-md font-semibold text-[1.25rem] md:text-[1.5rem] border-3 border-dashed border-[#ECECEC]">
               「いつかお城に戻れる」と、
-              <br />
+              <br className="hidden md:block" />
               夢見る力さえ枯れ果てて、
-              <br />
+              <br className="hidden md:block" />
               疲れが顔に出てしまいそうな方
             </p>
             <img
@@ -112,8 +116,8 @@ export function Example({ isFound }: { isFound: boolean }) {
     </div>
   ) : (
     <ul className="flex flex-col justify-start items-center px-4 py-32 gap-18">
-      <li className="flex items-start justify-center gap-8">
-        <p className="bg-[#3D3D3D] p-8 rounded-full font-bold text-[1.5rem] relative before:content-['▼'] before:absolute before:text-[#3D3D3D] before:top-1/2 before:-right-2 before:rotate-30">
+      <li className="flex flex-col md:flex-row md:items-start justify-center gap-8 items-center">
+        <p className="bg-[#3D3D3D] p-8 rounded-full font-bold text-[1.5rem] relative before:content-['▼'] before:absolute md:before:text-[#3D3D3D] md:before:top-1/2 md:before:-right-2 md:before:rotate-30">
           慣れない家事、小さな家、
           <br />
           いつ追手が来るか不安…
@@ -124,17 +128,17 @@ export function Example({ isFound }: { isFound: boolean }) {
           className="h-48"
         />
       </li>
-      <li className="flex items-start justify-center gap-8">
+      <li className="flex flex-col lg:items-start justify-center gap-8 items-center lg:flex-row-reverse">
+        <p className="bg-[#3D3D3D] p-8 rounded-full font-bold text-[1.5rem] relative before:content-['▼'] before:absolute md:before:text-[#3D3D3D] md:before:top-1/2 md:before:-right-2 md:before:rotate-30">
+          森の中でのサバイバル生活、
+          <br />
+          栄養が偏ってしまった…
+        </p>
         <img
           src="./games/snow-white/bad-example2.webp"
           alt="疲れ切ってしまった貴女…"
           className="h-40"
         />
-        <p className="bg-[#3D3D3D] p-8 rounded-full font-bold text-[1.5rem] relative before:content-['▼'] before:absolute before:text-[#3D3D3D] before:top-1/2 before:-left-3 before:rotate-90">
-          森の中でのサバイバル生活、
-          <br />
-          栄養が偏ってしまった…
-        </p>
       </li>
     </ul>
   );
@@ -144,7 +148,7 @@ export function Modal1({ isFound }: { isFound: boolean }) {
   return isFound ? (
     <></>
   ) : (
-    <div className="absolute top-300 left-1/2 -translate-x-1/2">
+    <div className="absolute lg:w-fit w-9/10 top-300 left-1/2 -translate-x-1/2 lg:whitespace-nowrap">
       <div className="bg-black text-[#E6FF45] flex flex-col gap-8 py-8 px-12 justify-start items-center">
         <h3 className="text-[3rem] font-bold text-center">
           お客様限定セール！！
@@ -154,7 +158,7 @@ export function Modal1({ isFound }: { isFound: boolean }) {
           <span className="text-[3rem]">特別版</span>が
           <span className="text-[3rem]">購入可能</span>です！
         </p>
-        <a className="bg-[#FF0004] cursor-pointer p-4 m-auto text-center w-fit font-black text-[2rem]">
+        <a className="bg-[#FF0004] cursor-pointer p-4 m-auto text-center w-fit font-black text-[2rem] whitespace-nowrap">
           今すぐ購入する！
         </a>
       </div>
@@ -182,15 +186,17 @@ export function Impact1({ isFound }: { isFound: boolean }) {
       />
     </div>
   ) : (
-    <div className="p-4 bg-[#E6FF45] py-18">
-      <p className="text-center font-bold text-[3rem]">そんなあなたに！</p>
-      <p className="text-center font-black text-[3rem] text-[#FF0000]">
+    <div className="p-4 bg-[#E6FF45] py-12 md:py-18">
+      <p className="text-center font-bold text-[2rem] lg:text-[3rem]">
+        そんなあなたに！
+      </p>
+      <p className="text-center font-black text-[2rem] lg:text-[3rem] text-[#FF0000]">
         紅の真珠（レッド・パールのしずく）
       </p>
       <img
         src="./games/snow-white/bad-apple2.webp"
         alt="これを食べたら…ゲヒヒヒヒ～～～～！"
-        className="max-w-120 object-fit m-auto py-12"
+        className="max-w-120 object-fit m-auto py-4 md:py-12"
       />
     </div>
   );
@@ -248,11 +254,11 @@ export function Appeal1({ isFound }: { isFound: boolean }) {
       </div>
     </div>
   ) : (
-    <ul className="flex gap-24 justify-center items-center py-18 px-4">
+    <ul className="flex flex-col md:flex-row gap-24 justify-center items-center py-18 px-4">
       <li className="flex justify-center items-center p-4">
         <img
           src="./games/snow-white/bad-dokuro.webp"
-          className="absolute opacity-50 h-60"
+          className="absolute opacity-50 h-56 lg:h-60"
         />
         <span className="text-[#FF0000] text-[3rem] text-center font-bold  relative z-0">
           一瞬で
@@ -263,7 +269,7 @@ export function Appeal1({ isFound }: { isFound: boolean }) {
       <li className="flex justify-center items-center p-4">
         <img
           src="./games/snow-white/bad-dokuro.webp"
-          className="absolute opacity-50 h-60"
+          className="absolute opacity-50 h-56 lg:h-60"
         />
         <span className="text-[#FF0000] text-[3rem] text-center font-bold relative z-0">
           信頼の
@@ -291,8 +297,10 @@ export function Conversion1({ isFound }: { isFound: boolean }) {
     </div>
   ) : (
     <div className="w-full pb-4 pt-12">
-      <a className="bg-[#FF0000] block w-full cursor-pointer py-12 px-8 text-center text-[4.5rem] text-[#E6FF45] text-shadow-lg font-bold">
-        今すぐ<span className="text-black">永遠</span>を手に入れる
+      <a className="bg-[#FF0000] block w-full cursor-pointer py-8 md:py-12 px-8 text-center text-[3rem] md:text-[4.5rem] text-[#E6FF45] text-shadow-lg font-bold">
+        今すぐ<span className="text-black">永遠</span>を
+        <br className="lg:hidden" />
+        手に入れる
       </a>
     </div>
   );
@@ -430,10 +438,12 @@ export function UserVoices({ isFound }: { isFound: boolean }) {
       </ul>
     </div>
   ) : (
-    <div className="w-full p-18 bg-[#C87676]">
-      <h3 className="font-bold text-[3rem] text-center pb-16">ご利用者の声</h3>
-      <ul className="flex flex-col justify-start items-center gap-8 max-w-4/5 m-auto">
-        <li className="flex w-fit justify-center items-center gap-8 bg-white rounded-lg shadow-md px-8 py-4">
+    <div className="w-full p-12 pb-18 bg-[#C87676]">
+      <h3 className="font-bold text-[2.5rem] md:text-[3rem] text-center py-12 md:pt-8">
+        ご利用者の声
+      </h3>
+      <ul className="flex flex-col justify-start items-center gap-8 lg:max-w-4/5 m-auto">
+        <li className="flex flex-col lg:flex-row w-fit justify-center items-center gap-8 bg-white rounded-lg shadow-md px-4 lg:px-8 py-4">
           <div className="max-w-120">
             <p className="text-[1.25rem]">
               「ひと口食べた瞬間、視界がブラックアウトしました！まさに人生の強制終了ボタン。あんなに憎かった義理の母の顔も思い出せないほど、深い闇の中へ。心臓が止まるような刺激を求めている方に、おすすめです。
@@ -444,7 +454,7 @@ export function UserVoices({ isFound }: { isFound: boolean }) {
           </div>
           <img src="./games/snow-white/mob-icon.webp" className="w-24" />
         </li>
-        <li className="flex justify-center items-center gap-8 bg-white rounded-lg shadow-md px-8 py-4">
+        <li className="flex flex-col lg:flex-row w-fit justify-center items-center gap-8 bg-white rounded-lg shadow-md px-4 lg:px-8 py-4">
           <div className="max-w-120">
             <p className="text-[1.25rem]">
               魔女秘伝の毒がしっかり効いて、呼吸するのも忘れるほどでした！食べた後の硬直感がすごくて、まるでガラスの棺にジャストフィットするお人形さんになった気分。末長く眠り続けたい時にぴったりです。
@@ -455,7 +465,7 @@ export function UserVoices({ isFound }: { isFound: boolean }) {
           </div>
           <img src="./games/snow-white/mob-icon.webp" className="w-24" />
         </li>
-        <li className="flex justify-center items-center gap-8 bg-white rounded-lg shadow-md px-8 py-4">
+        <li className="flex flex-col lg:flex-row w-fit justify-center items-center gap-8 bg-white rounded-lg shadow-md px-4 lg:px-8 py-4">
           <div className="max-w-120">
             <p className="text-[1.25rem]">
               毒々しい見た目に惹かれて購入。噛むたびに毒素が溢れ出し、即座にあの世が見えました！面倒な王子様の迎えさえなければ、一生起きなくて済む最高の商品。
@@ -506,10 +516,10 @@ export function Appeal2({ isFound }: { isFound: boolean }) {
         一口で、王妃も嫉妬する<span className="text-[5rem]">永遠の美貌</span>
         を手に入れませんか？
       </p>
-      <p className=" text-center pb-4 pt-12 text-[1.5rem]">
+      <p className=" text-center pb-4 pt-12 text-[1rem] lg:text-[1.5rem]">
         ＼今だけ毒素30％増量セール開催中！／
       </p>
-      <a className="block bg-black text-center p-4 text-[#FF0000] px-12 py-8 m-auto w-fit text-[3rem]">
+      <a className="block bg-black text-center p-4 text-[#FF0000] px-12 py-8 m-auto w-fit text-[2rem] lg:text-[3rem]">
         永遠の安らぎを手に入れましょう
       </a>
     </div>
@@ -632,8 +642,8 @@ export function Appeal3({ isFound }: { isFound: boolean }) {
   ) : (
     <>
       <div className="pt-12 pb-12 px-4">
-        <a className="bg-linear-to-b from-[#E53131] to-[#991919] block w-full cursor-pointer py-8 px-4 rounded-4xl text-center m-auto text-[#00FF0D] text-[5rem] font-bold">
-          <span className="text-[#FF45FF] block text-[2rem]">
+        <a className="bg-linear-to-b from-[#E53131] to-[#991919] block w-full cursor-pointer py-8 px-4 rounded-4xl text-center m-auto text-[#00FF0D] text-[3rem] lg:text-[5rem] font-bold">
+          <span className="text-[#FF45FF] block text-[1.5rem] lg:text-[2rem] mb-4">
             ＼これが<b className="text-[#9000FF]">最後</b>のチャンスです！／
           </span>
           今すぐ、<b className="text-[#E6FF45]">幸せ</b>を噛みしめる

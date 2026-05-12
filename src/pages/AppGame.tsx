@@ -12,9 +12,16 @@ type Props = {
   activeGame: Game;
   foundIds: string[];
   setFoundIds: React.Dispatch<React.SetStateAction<string[]>>;
+  isDebug: boolean;
 };
 
-function AppGame({ setScene, activeGame, foundIds, setFoundIds }: Props) {
+function AppGame({
+  setScene,
+  activeGame,
+  foundIds,
+  setFoundIds,
+  isDebug,
+}: Props) {
   const [activeId, setActiveId] = useState<string | null>(null);
 
   const activeProblems = problems[activeGame as keyof typeof problems];
@@ -60,6 +67,11 @@ function AppGame({ setScene, activeGame, foundIds, setFoundIds }: Props) {
             FOUND: {foundIds.length}/{activeProblems?.length ?? "?"}
           </>
         )}
+        {isDebug && (
+          <span className="font-bold bg-(--primary-lite-color) px-1 rounded-sm">
+            DEBUG MODE
+          </span>
+        )}
       </nav>
 
       {/* --- ゲーム本体の切り替え --- */}
@@ -68,6 +80,7 @@ function AppGame({ setScene, activeGame, foundIds, setFoundIds }: Props) {
           foundIds={foundIds}
           onFound={handleFound}
           problems={activeProblems}
+          isDebug={isDebug}
         />
       )}
       {activeId && (
