@@ -129,7 +129,7 @@ export function Example({ isFound }: { isFound: boolean }) {
         />
       </li>
       <li className="flex flex-col lg:items-start justify-center gap-8 items-center lg:flex-row-reverse">
-        <p className="bg-[#3D3D3D] p-8 rounded-full font-bold text-[1.5rem] relative before:content-['▼'] before:absolute md:before:text-[#3D3D3D] md:before:top-1/2 md:before:-right-2 md:before:rotate-30">
+        <p className="bg-[#3D3D3D] p-8 rounded-full font-bold text-[1.5rem] relative before:content-['▼'] before:absolute md:before:text-[#3D3D3D] md:before:top-1/2 md:before:-left-3 md:before:rotate-60">
           森の中でのサバイバル生活、
           <br />
           栄養が偏ってしまった…
@@ -213,8 +213,8 @@ export function Appeal1({ isFound }: { isFound: boolean }) {
           <span className="text-[2.625rem]">お墨付き</span>
           をいただいております！
         </p>
-        <ul className="flex justify-center items-start gap-12 py-12">
-          <li className="max-w-1/3 w-80 flex flex-col justify-center items-center text-[#4B2C2C] text-[2rem] font-bold">
+        <ul className="flex flex-col lg:flex-row justify-center items-start gap-30 lg:gap-12 py-12">
+          <li className="lg:max-w-1/3 w-80 m-auto flex flex-col justify-center items-center text-[#4B2C2C] text-[2rem] font-bold">
             <img
               src="./games/snow-white/good-laurel.webp"
               className="absolute opacity-50 h-60"
@@ -226,7 +226,7 @@ export function Appeal1({ isFound }: { isFound: boolean }) {
               第<span className="text-[3.5rem]">１</span>位
             </div>
           </li>
-          <li className="max-w-1/3 w-80 flex flex-col justify-center items-center text-[#4B2C2C] text-[2rem] font-bold">
+          <li className="lg:max-w-1/3 w-80 m-auto flex flex-col justify-center items-center text-[#4B2C2C] text-[2rem] font-bold">
             <img
               src="./games/snow-white/good-laurel.webp"
               className="absolute opacity-50 h-60"
@@ -238,7 +238,7 @@ export function Appeal1({ isFound }: { isFound: boolean }) {
               第<span className="text-[3.5rem]">１</span>位
             </div>
           </li>
-          <li className="max-w-1/3 w-80 flex flex-col justify-center items-center text-[#4B2C2C] text-[2rem] font-bold">
+          <li className="lg:max-w-1/3 w-80 m-auto flex flex-col justify-center items-center text-[#4B2C2C] text-[2rem] font-bold">
             <img
               src="./games/snow-white/good-laurel.webp"
               className="absolute opacity-50 h-60"
@@ -283,14 +283,14 @@ export function Appeal1({ isFound }: { isFound: boolean }) {
 
 export function Conversion1({ isFound }: { isFound: boolean }) {
   return isFound ? (
-    <div className="w-full pt-36 px-12">
-      <p className="text-[2rem] font-medium text-center pb-36">
+    <div className="w-full pt-36 px-4 lg:px-12">
+      <p className="text-[1.5rem] lg:text-[2rem] font-medium text-center pb-24 lg:pb-36 leading-loose">
         七人のために頑張るあなたへ。
         <br />
         朝一番の魔法を贈りませんか？
       </p>
-      <a className="bg-linear-to-b from-[#E53131] to-[#991919] block w-full cursor-pointer py-12 px-8 rounded-4xl text-center shadow-md shadow-gray-400 max-w-300 m-auto">
-        <span className="font-bold bg-clip-text text-transparent bg-linear-to-b from-[#F8E855] via-[#FCFE97] to-[#DEA83D] text-center text-[4.5rem]">
+      <a className="bg-linear-to-b from-[#E53131] to-[#991919] block w-full cursor-pointer p-8 lg:py-12 lg:px-8 rounded-4xl text-center shadow-md shadow-gray-400 max-w-300 m-auto">
+        <span className="font-bold bg-clip-text text-transparent bg-linear-to-b from-[#F8E855] via-[#FCFE97] to-[#DEA83D] text-center text-[3rem] lg:text-[4.5rem]">
           「紅の真珠」を今すぐ手に入れる
         </span>
       </a>
@@ -334,7 +334,7 @@ export function StoryTelling({ isFound }: { isFound: boolean }) {
   return isFound ? (
     <>
       <div className="w-full bg-[linear-gradient(to_bottom,transparent_70%,white_100%),url(/games/snow-white/bg-forest.webp)] bg-cover flex items-stretch">
-        <p className="m-auto pt-18 pb-28 px-8 bg-white/80 text-center text-[1.5rem] leading-[3]">
+        <p className="m-auto pt-18 pb-28 px-8 bg-white/80 text-center text-[1.25rem] lg:text-[1.5rem] leading-loose lg:leading-[3]">
           お城からの追手に怯える日々も、
           <br />
           七人のために自分を削る毎日も、
@@ -342,24 +342,36 @@ export function StoryTelling({ isFound }: { isFound: boolean }) {
           もう終わりにしましょう。
           <br />
           <br />
-          これは、今は脇役として生きるあなたのために、
+          これは、
+          <br className="md:hidden" />
+          今は脇役として生きる
+          <br className="md:hidden" />
+          あなたのために、
           <br />
-          特別に開発された「人生の特効薬」です。
+          特別に開発された
+          <br className="md:hidden" />
+          「人生の特効薬」です。
           <br />
           <br />
           「紅の真珠」を口にした瞬間、
           <br />
           あなたの細胞一つひとつが、
           <br />
-          真珠のような気品ある輝きをまといます。
+          真珠のような気品ある
+          <br className="md:hidden" />
+          輝きをまといます。
           <br />
           <br />
-          自分を最高に幸せにするための魔法。
+          自分を最高に
+          <br className="md:hidden" />
+          幸せにするための魔法。
           <br />
           <br />
           もう耐えるだけのお姫様ではない。
           <br />
-          この一粒で、あなたが世界の中心になる。
+          この一粒で、
+          <br className="md:hidden" />
+          あなたが世界の中心になる。
           <br />
           <br />
           新しい物語を始めてください。
@@ -370,11 +382,12 @@ export function StoryTelling({ isFound }: { isFound: boolean }) {
           今なら「紅の真珠」が
           <br />
           <span className="font-bold text-[2.25rem]">
-            送料無料！ 即日お届け！
+            送料無料！ <br className="md:hidden" />
+            即日お届け！
           </span>
         </p>
-        <a className="bg-linear-to-b from-[#E53131] to-[#991919] block w-full cursor-pointer py-12 px-8 rounded-4xl text-center shadow-md shadow-gray-400 max-w-300 m-auto ">
-          <span className="font-bold bg-clip-text text-transparent bg-linear-to-b from-[#F8E855] via-[#FCFE97] to-[#DEA83D] text-center text-[4.5rem]">
+        <a className="bg-linear-to-b from-[#E53131] to-[#991919] block w-full cursor-pointer p-8 lg:py-12 lg:px-8 rounded-4xl text-center shadow-md shadow-gray-400 max-w-300 m-auto">
+          <span className="font-bold bg-clip-text text-transparent bg-linear-to-b from-[#F8E855] via-[#FCFE97] to-[#DEA83D] text-center text-[3rem] lg:text-[4.5rem]">
             「紅の真珠」を今すぐ手に入れる
           </span>
         </a>
@@ -399,38 +412,46 @@ export function StoryTelling({ isFound }: { isFound: boolean }) {
 
 export function UserVoices({ isFound }: { isFound: boolean }) {
   return isFound ? (
-    <div className="w-full p-18 bg-linear-to-br from-[#FEFFDC] to-[#FFC0C0]">
-      <h3 className="font-bold text-[3rem] text-center pb-16">ご利用者の声</h3>
-      <ul className="flex flex-col justify-start items-center gap-8 max-w-4/5 m-auto">
-        <li className="flex w-fit justify-center items-center gap-8 bg-white rounded-lg shadow-md px-8 py-4">
+    <div className="w-full p-12 md:p-18 bg-linear-to-br from-[#FEFFDC] to-[#FFC0C0]">
+      <h3 className="font-bold text-[2rem] lg:text-[3rem] text-center pb-10 md:pb-16">
+        ご利用者の声
+      </h3>
+      <ul className="flex flex-col justify-start items-center gap-8 w-full md:max-w-4/5 m-auto">
+        <li className="flex flex-col lg:flex-row w-fit justify-center items-center gap-8 bg-white rounded-lg shadow-md px-8 py-4">
           <div className="max-w-120">
             <p className="text-[1.25rem]">
               「ひと口食べた瞬間、視界がブラックアウトしました！まさに人生の強制終了ボタン。あんなに憎かった義理の母の顔も思い出せないほど、深い闇の中へ。心臓が止まるような刺激を求めている方に、おすすめです。
             </p>
             <span className="block w-full text-right pt-4">
-              森の美少女 S様（永遠の10代）
+              森の美少女 S様
+              <br className="md:hidden" />
+              （永遠の10代）
             </span>
           </div>
           <img src="./games/snow-white/girl_15.webp" className="w-24" />
         </li>
-        <li className="flex justify-center items-center gap-8 bg-white rounded-lg shadow-md px-8 py-4">
+        <li className="flex flex-col lg:flex-row w-fit justify-center items-center gap-8 bg-white rounded-lg shadow-md px-8 py-4">
           <div className="max-w-120">
             <p className="text-[1.25rem]">
               魔女秘伝の毒がしっかり効いて、呼吸するのも忘れるほどでした！食べた後の硬直感がすごくて、まるでガラスの棺にジャストフィットするお人形さんになった気分。末長く眠り続けたい時にぴったりです。
             </p>
             <span className="block w-full text-right pt-4">
-              丁寧な暮らしをしたい女子 B様（推定20代）
+              丁寧な暮らしをしたい女子 B様
+              <br className="md:hidden" />
+              （推定20代）
             </span>
           </div>
           <img src="./games/snow-white/girl_18.webp" className="w-24" />
         </li>
-        <li className="flex justify-center items-center gap-8 bg-white rounded-lg shadow-md px-8 py-4">
+        <li className="flex flex-col lg:flex-row w-fit justify-center items-center gap-8 bg-white rounded-lg shadow-md px-8 py-4">
           <div className="max-w-120">
             <p className="text-[1.25rem]">
               毒々しい見た目に惹かれて購入。噛むたびに毒素が溢れ出し、即座にあの世が見えました！面倒な王子様の迎えさえなければ、一生起きなくて済む最高の商品。
             </p>
             <span className="block w-full text-right pt-4">
-              7人の同居人と暮らす苦労人 C様（年齢非公開）
+              7人の同居人と暮らす苦労人 C様
+              <br className="md:hidden" />
+              （年齢非公開）
             </span>
           </div>
           <img src="./games/snow-white/girl_24.webp" className="w-24" />
@@ -554,11 +575,11 @@ export function Faq({ isFound }: { isFound: boolean }) {
   ];
 
   return isFound ? (
-    <div className="pt-36 pb-40 px-4 bg-[linear-gradient(to_bottom,#FFC0C0_90%,transparent_100%)]">
+    <div className="pt-20 mb:pt-36 pb-40 px-4 bg-[linear-gradient(to_bottom,#FFC0C0_90%,transparent_100%)]">
       <h3 className="text-center font-bold text-[2rem] pb-12">
         よくあるご質問
       </h3>
-      <ul className="flex flex-col gap-8 m-auto max-w-3/5">
+      <ul className="flex flex-col gap-8 m-auto md:max-w-3/5">
         {faqData.map((item, i) => {
           const isOpen = openIndexes.includes(i);
           return (
@@ -616,7 +637,7 @@ export function Faq({ isFound }: { isFound: boolean }) {
 export function Appeal3({ isFound }: { isFound: boolean }) {
   return isFound ? (
     <>
-      <div className="relative pt-24 pb-60 w-full overflow-hidden">
+      <div className="relative pt-24 pb-60 w-full overflow-hidden px-4">
         <div
           className="absolute inset-0 top-1/3 -z-10 bg-[url(/games/snow-white/bg-end.webp)] bg-cover bg-top"
           style={{
@@ -625,12 +646,16 @@ export function Appeal3({ isFound }: { isFound: boolean }) {
               "linear-gradient(to bottom, transparent, white 20%)",
           }}
         />
-        <p className="text-center font-bold text-[3rem]">
+        <p className="text-center font-bold text-[2rem] md:text-[3rem]">
           <span className="text-[#FF0004]">送料無料・即日お届け</span>
+          <br className="lg:hidden" />
           は今だけです！
         </p>
-        <a className="bg-linear-to-b from-[#E53131] to-[#991919] block w-full cursor-pointer py-12 px-8 rounded-4xl text-center shadow-md shadow-gray-400 max-w-300 mx-auto my-24">
-          <span className="font-bold bg-clip-text text-transparent bg-linear-to-b from-[#F8E855] via-[#FCFE97] to-[#DEA83D] text-center text-[4.5rem]">
+        <a className="bg-linear-to-b from-[#E53131] to-[#991919] block w-full cursor-pointer p-8 md:py-12 px-8 rounded-4xl text-center shadow-md shadow-gray-400 max-w-300 mx-auto my-24">
+          <span
+            className="font-bold bg-clip-text text-transparent bg-linear-to-b from-[#F8E855] via-[#FCFE97] to-[#DEA83D] text-center text-[3rem]
+           lg:text-[4.5rem]"
+          >
             「紅の真珠」を今すぐ手に入れる
           </span>
         </a>

@@ -38,6 +38,7 @@ function GameController({ foundIds, onFound, problems, isDebug }: Props) {
               <ToggleSwitch
                 checked={found}
                 onChange={() => toggleDebugState(p.id)}
+                addClass="absolute left-4 top-2 z-1"
               />
             )}
           </div>

@@ -42,13 +42,16 @@ function AppStart({ setScene, setActiveGame, isDebug, setIsDebug }: Props) {
               <option value="snow-white">Snow White</option>
             </select>
           </div>
-          <div className="flex items-center gap-4 text-(--primary-color) text-[1.25rem]">
-            <span>DebugMode?：{isDebug ? "ON" : "OFF"}</span>
-
-            <ToggleSwitch
-              checked={isDebug}
-              onChange={() => setIsDebug((prev) => !prev)}
-            />
+          <div className="flex items-center gap-4 text-(--primary-color) text-[1.25rem] justify-center">
+            <span className="inline-flex">
+              DebugMode?：<span className="w-8">{isDebug ? "ON" : "OFF"}</span>
+            </span>
+            <div className="relative inline-flex">
+              <ToggleSwitch
+                checked={isDebug}
+                onChange={() => setIsDebug((prev) => !prev)}
+              />
+            </div>
           </div>
           <button
             className="izis-primary-button"
