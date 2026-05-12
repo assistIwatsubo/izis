@@ -19,15 +19,19 @@ function GameController({ foundIds, onFound, problems, isDebug }: Props) {
       [id]: !prev[id],
     }));
   };
+
   return (
     <section className="font-serif overflow-hidden">
       {problems.map((p) => {
         const found = isDebug ? !!debugStates[p.id] : foundIds.includes(p.id);
+
         const UI = p.ui;
+
+        const Wrapper = isDebug ? "div" : "section";
+
         return (
-          <>
+          <Wrapper key={p.id} className={isDebug ? "relative" : ""}>
             <ToggleUI
-              key={p.id}
               id={p.id}
               isFound={found}
               onFound={onFound}
@@ -38,10 +42,10 @@ function GameController({ foundIds, onFound, problems, isDebug }: Props) {
               <ToggleSwitch
                 checked={found}
                 onChange={() => toggleDebugState(p.id)}
-                addClass="absolute left-4 top-2 z-1"
+                addClass="absolute left-4 top-2 z-10"
               />
             )}
-          </>
+          </Wrapper>
         );
       })}
     </section>
