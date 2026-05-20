@@ -21,7 +21,7 @@ function GameController({ foundIds, onFound, problems, isDebug }: Props) {
   };
 
   return (
-    <section className="font-serif overflow-hidden">
+    <div className="font-serif overflow-hidden">
       {problems.map((p) => {
         const found = isDebug ? !!debugStates[p.id] : foundIds.includes(p.id);
 
@@ -48,7 +48,7 @@ function GameController({ foundIds, onFound, problems, isDebug }: Props) {
           </Wrapper>
         );
       })}
-    </section>
+    </div>
   );
 }
 

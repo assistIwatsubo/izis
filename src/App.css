@@ -10,6 +10,7 @@ body {
   --primary-color: #ae1b6f;
   --primary-lite-color: #ff82c9;
   --font-noto-sans-jp: "Noto Sans JP", sans-serif;
+  --font-shippori-mincho: "Shippori Mincho", serif;
 }
 
 .izis-text-shadow {

@@ -28,6 +28,7 @@ function App() {
             resetFoundIds();
             setScene(s);
           }}
+          activeGame={activeGame}
           setActiveGame={setActiveGame}
           isDebug={isDebug}
           setIsDebug={setIsDebug}

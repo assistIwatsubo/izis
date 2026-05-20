@@ -1,14 +1,21 @@
-import { type Game } from "../types/types";
+import { GAMES, type Game } from "../types/types";
 import ToggleSwitch from "../components/ToggleSwitch";
 
 type Props = {
   setScene: (scene: "START" | "GAME" | "RESULT") => void;
+  activeGame: Game;
   setActiveGame: (game: Game) => void;
   isDebug: boolean;
   setIsDebug: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-function AppStart({ setScene, setActiveGame, isDebug, setIsDebug }: Props) {
+function AppStart({
+  setScene,
+  activeGame,
+  setActiveGame,
+  isDebug,
+  setIsDebug,
+}: Props) {
   return (
     <section className="bg-[url('/izis-background.webp')] bg-cover bg-center min-h-screen flex flex-col justify-around px-4 py-12">
       <div className="py-4">
@@ -36,10 +43,17 @@ function AppStart({ setScene, setActiveGame, isDebug, setIsDebug }: Props) {
             <select
               name="game"
               id="game"
-              className="bg-white/50 rounded-md px-2"
+              className="capitalize bg-white/50 rounded-md px-2"
+              value={activeGame}
               onChange={(e) => setActiveGame(e.target.value as Game)}
             >
-              <option value="snow-white">Snow White</option>
+              {GAMES?.map((item) => {
+                return (
+                  <option key={item} value={item} className="capitalize">
+                    {item.replace("-", " ")}
+                  </option>
+                );
+              })}
             </select>
           </div>
           <div className="flex items-center gap-4 text-(--primary-color) text-[1.25rem] justify-center">
