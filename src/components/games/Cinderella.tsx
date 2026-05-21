@@ -719,7 +719,7 @@ export function Faq({ isFound }: { isFound: boolean }) {
 export function Contact({ isFound }: { isFound: boolean }) {
   return isFound ? (
     <>
-      <section className="flex flex-col gap-16 items-center justify-center pb-32 bg-[linear-gradient(to_bottom,rgba(255,255,255,1),rgba(255,255,255,0.5)),url(./games/cinderella/bg-linen.webp)] bg-cover bg-bottom text-[#1f2937]">
+      <section className="flex flex-col gap-16 items-center justify-center pb-32 bg-[linear-gradient(to_bottom,rgba(255,255,255,1),rgba(255,255,255,0.5)),url(/games/cinderella/bg-linen.webp)] bg-cover bg-bottom text-[#1f2937]">
         <div
           className={`flex flex-col justify-start items-center gap-20 ${GOLD_ACCENT}`}
         >
