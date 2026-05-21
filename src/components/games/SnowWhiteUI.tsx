@@ -144,7 +144,7 @@ export function Example({ isFound }: { isFound: boolean }) {
   ) : (
     <ul className="flex flex-col justify-start items-center px-4 py-32 gap-18">
       <li className="flex flex-col md:flex-row md:items-start justify-center gap-8 items-center">
-        <p className="bg-[#3D3D3D] p-8 rounded-full font-bold text-[1.5rem] relative before:content-['▼'] before:absolute md:before:text-[#3D3D3D] md:before:top-1/2 md:before:-right-2 md:before:rotate-30">
+        <p className="bg-[#3D3D3D] p-8 rounded-full font-bold text-[1.25rem] relative before:content-['▼'] before:absolute md:before:text-[#3D3D3D] md:before:top-1/2 md:before:-right-2 md:before:rotate-30">
           慣れない家事、小さな家、
           <br />
           いつ追手が来るか不安…
@@ -156,7 +156,7 @@ export function Example({ isFound }: { isFound: boolean }) {
         />
       </li>
       <li className="flex flex-col lg:items-start justify-center gap-8 items-center lg:flex-row-reverse">
-        <p className="bg-[#3D3D3D] p-8 rounded-full font-bold text-[1.5rem] relative before:content-['▼'] before:absolute md:before:text-[#3D3D3D] md:before:top-1/2 md:before:-left-3 md:before:rotate-60">
+        <p className="bg-[#3D3D3D] p-8 rounded-full font-bold text-[1.25rem] relative before:content-['▼'] before:absolute md:before:text-[#3D3D3D] md:before:top-1/2 md:before:-left-3 md:before:rotate-60">
           森の中でのサバイバル生活、
           <br />
           栄養が偏ってしまった…
@@ -198,7 +198,7 @@ export function Impact1({ isFound }: { isFound: boolean }) {
   return isFound ? (
     <div className="p-4 lg:relative">
       <div className="sm:absolute sm:left-1/2 sm:-translate-x-1/2 w-full bg-white/50">
-        <p className="text-center font-bold text-[2rem] sm:text-[3rem] pt-16 leading-loose">
+        <p className="text-center font-bold text-[1.75rem] sm:text-[3rem] pt-16 leading-loose">
           あなたの毎日を変える、
           <br className="lg:hidden" />
           一粒限りの魔法。
@@ -320,7 +320,7 @@ export function Appeal1({ isFound }: { isFound: boolean }) {
 export function Conversion1({ isFound }: { isFound: boolean }) {
   return isFound ? (
     <div className="w-full pt-24 md:pt-36 px-8 lg:px-12">
-      <p className="text-[1.5rem] md:text-[2rem] font-medium text-center pb-18 md:pb-36 leading-loose">
+      <p className="text-[1.25rem] md:text-[2rem] font-medium text-center pb-18 md:pb-36 leading-loose">
         七人のために頑張るあなたへ。
         <br />
         朝一番の魔法を贈りませんか？
@@ -366,7 +366,7 @@ export function StoryTelling({ isFound }: { isFound: boolean }) {
   return isFound ? (
     <>
       <div className="w-full bg-[linear-gradient(to_bottom,transparent_70%,white_100%),url(/games/snow-white/bg-forest.webp)] bg-cover flex items-stretch">
-        <p className="m-auto pt-18 pb-28 px-8 bg-white/80 text-center text-[1.25rem] lg:text-[1.5rem] leading-loose lg:leading-[3]">
+        <p className="m-auto pt-18 pb-28 px-4 bg-white/80 text-center text-[1.25rem] lg:text-[1.5rem] leading-loose lg:leading-[3]">
           お城からの追手に怯える日々も、
           <br />
           七人のために自分を削る毎日も、
@@ -441,12 +441,12 @@ export function StoryTelling({ isFound }: { isFound: boolean }) {
 
 export function UserVoices({ isFound }: { isFound: boolean }) {
   return isFound ? (
-    <div className="w-full p-12 md:p-18 bg-linear-to-br from-[#FEFFDC] to-[#FFC0C0]">
+    <div className="w-full py-12 px-8 md:p-18 bg-linear-to-br from-[#FEFFDC] to-[#FFC0C0]">
       <h3 className="font-bold text-[2rem] lg:text-[3rem] text-center pb-10 md:pb-16">
         ご利用者の声
       </h3>
       <ul className="flex flex-col justify-start items-center gap-8 w-full md:max-w-4/5 m-auto">
-        <li className="flex flex-col lg:flex-row w-fit justify-center items-center gap-8 bg-white rounded-lg shadow-md px-8 py-4">
+        <li className="flex flex-col lg:flex-row w-fit justify-center items-center gap-8 bg-white rounded-lg shadow-md p-8">
           <div className="max-w-120">
             <p className="text-[1.25rem]">
               「ひと口食べた瞬間、視界がブラックアウトしました！まさに人生の強制終了ボタン。あんなに憎かった義理の母の顔も思い出せないほど、深い闇の中へ。心臓が止まるような刺激を求めている方に、おすすめです。
@@ -459,7 +459,7 @@ export function UserVoices({ isFound }: { isFound: boolean }) {
           </div>
           <img src="./games/snow-white/girl_15.webp" className="w-24" />
         </li>
-        <li className="flex flex-col lg:flex-row w-fit justify-center items-center gap-8 bg-white rounded-lg shadow-md px-8 py-4">
+        <li className="flex flex-col lg:flex-row w-fit justify-center items-center gap-8 bg-white rounded-lg shadow-md p-8">
           <div className="max-w-120">
             <p className="text-[1.25rem]">
               魔女秘伝の毒がしっかり効いて、呼吸するのも忘れるほどでした！食べた後の硬直感がすごくて、まるでガラスの棺にジャストフィットするお人形さんになった気分。末長く眠り続けたい時にぴったりです。
@@ -472,7 +472,7 @@ export function UserVoices({ isFound }: { isFound: boolean }) {
           </div>
           <img src="./games/snow-white/girl_18.webp" className="w-24" />
         </li>
-        <li className="flex flex-col lg:flex-row w-fit justify-center items-center gap-8 bg-white rounded-lg shadow-md px-8 py-4">
+        <li className="flex flex-col lg:flex-row w-fit justify-center items-center gap-8 bg-white rounded-lg shadow-md p-8">
           <div className="max-w-120">
             <p className="text-[1.25rem]">
               毒々しい見た目に惹かれて購入。噛むたびに毒素が溢れ出し、即座にあの世が見えました！面倒な王子様の迎えさえなければ、一生起きなくて済む最高の商品。
@@ -544,7 +544,7 @@ export function Appeal2({ isFound }: { isFound: boolean }) {
         手に入れましょう。
       </p>
       <p className="pt-12 px-4 text-center pb-8 text-[1.75rem] md:text-[2.25rem] font-bold">
-        <span className="text-[2rem] md:text-[2.625rem] leading-loose">
+        <span className="text-[2rem] md:text-[2.625rem] leading-loose whitespace-nowrap">
           送料無料・即日お届け
         </span>
         は<br className="lg:hidden" />
@@ -679,7 +679,9 @@ export function Appeal3({ isFound }: { isFound: boolean }) {
           }}
         />
         <p className="text-center font-bold text-[2rem] md:text-[3rem] pb-8">
-          <span className="text-[#FF0004]">送料無料・即日お届け</span>
+          <span className="text-[#FF0004] whitespace-nowrap">
+            送料無料・即日お届け
+          </span>
           <br className="lg:hidden" />
           は今だけです！
         </p>

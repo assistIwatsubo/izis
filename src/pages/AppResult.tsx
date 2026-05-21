@@ -16,7 +16,7 @@ function AppResult({ setScene, activeGame, onFullFound }: Props) {
         IZIS <small>- FIX THE UI -</small>
       </h1>
       <div className="py-4">
-        <h2 className="leading-tight text-center text-[5rem] font-black text-white izis-text-shadow my-12">
+        <h2 className="leading-tight text-center text-[5rem] font-black text-white izis-text-shadow my-8 sm:my-12">
           RESULT
         </h2>
       </div>

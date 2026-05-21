@@ -52,7 +52,7 @@ export function Header({ isFound }: { isFound: boolean }) {
   const currentMinutes = Math.ceil(seconds / 60);
 
   return isFound ? (
-    <header className="fixed top-0 left-0 right-0 z-1 text-center bg-linear-to-b from-[#0A1931] via-[#1F4D97] to-transparent pt-1 pb-2 font-shippori-mincho">
+    <header className="fixed top-0 left-0 right-0 z-1 text-center bg-linear-to-b from-[#0A1931] via-[#1F4D97] to-transparent pb-2 font-shippori-mincho pt-[env(safe-area-inset-top)]">
       <a href="#faq" className={`${GOLD_TEXT_CLASS} shippori-mincho`}>
         舞踏会まであと<span className="text-[1.25rem]">0</span>時間
         <span className="text-[1.25rem]">{currentMinutes}</span>分
@@ -60,7 +60,7 @@ export function Header({ isFound }: { isFound: boolean }) {
     </header>
   ) : (
     <header
-      className={`fixed top-0 left-0 right-0 bg-[#9000FF] text-center text-white font-bold py-2 rounded-b-sm transition-all duration-700 ease-in-out z-1 ${
+      className={`pt-[env(safe-area-inset-top)] fixed top-0 left-0 right-0 bg-[#9000FF] text-center text-white font-bold py-2 rounded-b-sm transition-all duration-700 ease-in-out z-1 ${
         isExpanded ? "h-[50vh] flex flex-col justify-center" : "h-auto"
       }`}
     >

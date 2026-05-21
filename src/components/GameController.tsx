@@ -21,7 +21,7 @@ function GameController({ foundIds, onFound, problems, isDebug }: Props) {
   };
 
   return (
-    <div className="font-serif overflow-hidden">
+    <div className="font-serif overflow-hidden pt-[env(safe-area-inset-top)]">
       {problems.map((p) => {
         const found = isDebug ? !!debugStates[p.id] : foundIds.includes(p.id);
 
