@@ -13,7 +13,7 @@ const GOLD_BORDER =
 const GLASS_BG = "bg-white/50 backdrop-blur-[0.25rem]";
 
 const GOLD_ACCENT =
-  "after:content-[''] after:inline-block after:w-full after:h-8 after:my-8 after:bg-[url(./games/cinderella/good-decoration.webp)] after:bg-contain after:bg-center after:bg-no-repeat lg:after:mt-12";
+  "after:content-[''] after:inline-block after:w-full after:h-8 after:my-8 after:bg-[url(/games/cinderella/good-decoration.webp)] after:bg-contain after:bg-center after:bg-no-repeat lg:after:mt-12";
 
 const GOLD_BUTTON =
   "[background:linear-gradient(to_right,#AA7C11,#fff9e6,#AA7C11)_padding-box,linear-gradient(to_bottom,#D4AF37,#DEA83D,#AA7C11)_border-box] [background:linear-gradient(to_bottom,#D4AF37,#FFFDF0,#AA7C11)_padding-box,linear-gradient(to_bottom,#D4AF37,#DEA83D,#AA7C11)_border-box] border-2 cursor-pointer";
@@ -156,7 +156,7 @@ export function Reasons({ isFound }: { isFound: boolean }) {
     },
   ];
   return isFound ? (
-    <section className="m-auto flex flex-col gap-8 pt-12 lg:pt-24 lg:pb-40 pb-20 px-4 font-noto-sans-jp bg-[url(./games/cinderella/bg-rose.webp)] bg-cover bg-center">
+    <section className="m-auto flex flex-col gap-8 pt-12 lg:pt-24 lg:pb-40 pb-20 px-4 font-noto-sans-jp bg-[url(/games/cinderella/bg-rose.webp)] bg-cover bg-center">
       <h2
         className={`${GOLD_ACCENT} flex flex-col items-center pt-4 lg:py-8 px-4 text-[2rem] lg:text-[2.5rem] font-semi-bold text-center text-[#1F2937] font-shippori-mincho`}
       >
@@ -220,7 +220,7 @@ export function AdditionalPlan({ isFound }: { isFound: boolean }) {
   return isFound ? (
     <section className="px-4">
       <div className={`${GOLD_BORDER} max-w-200 my-12 m-auto`}>
-        <div className="bg-[url(./games/cinderella/bg-glitter.webp)] flex flex-col justify-start items-center bg-cover py-4 px-2">
+        <div className="bg-[url(/games/cinderella/bg-glitter.webp)] flex flex-col justify-start items-center bg-cover py-4 px-2">
           <span className="text-center font-bold text-[1.5rem] text-white text-shadow-lg filter drop-shadow-[0_0_0.25rem_rgba(0,0,0,1)] leading-loose">
             さらに嬉しい！
           </span>
@@ -367,7 +367,7 @@ export function UserVoices({ isFound }: { isFound: boolean }) {
       </div>
     </section>
   ) : (
-    <section className="py-12 lg:py-24 px-4 bg-[#FF45FF] bg-[url(./games/cinderella/icon-magic.webp)] bg-repeat">
+    <section className="py-12 lg:py-24 px-4 bg-[#FF45FF] bg-[url(/games/cinderella/icon-magic.webp)] bg-repeat">
       <div className="max-w-240 flex flex-col gap-8 lg:gap-12 justify-start items-center m-auto">
         <h2 className="font-bold font-noto-sans-jp text-[1.5rem] lg:text-[3rem] filter drop-shadow-[2px_4px_0.25rem_rgba(0,0,0,1)]">
           お客様の声
@@ -408,7 +408,7 @@ export function UserVoices({ isFound }: { isFound: boolean }) {
 export function Appeal2({ isFound }: { isFound: boolean }) {
   return isFound ? (
     <div
-      className={`${GOLD_BORDER} border-x-0 font-shippori-mincho py-20 lg:py-30 px-4 flex flex-col gap-16 items-center justify-start bg-[url(./games/cinderella/bg-nightsky.webp)] bg-cover bg-center`}
+      className={`${GOLD_BORDER} border-x-0 font-shippori-mincho py-20 lg:py-30 px-4 flex flex-col gap-16 items-center justify-start bg-[url(/games/cinderella/bg-nightsky.webp)] bg-cover bg-center`}
     >
       <p className="font-medium text-[1.5rem] lg:text-[2rem] lg:pb-8 text-center text-white filter drop-shadow-[0_0_0.25rem_rgba(0,0,0,1)]">
         誰もが憧れるプリンセスに、
