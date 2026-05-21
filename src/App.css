@@ -4,6 +4,7 @@
 :root,
 body {
   font-family: "M PLUS 2", sans-serif;
+  scroll-behavior: smooth;
 }
 
 @theme {
@@ -11,6 +12,21 @@ body {
   --primary-lite-color: #ff82c9;
   --font-noto-sans-jp: "Noto Sans JP", sans-serif;
   --font-shippori-mincho: "Shippori Mincho", serif;
+  --font-kaisei-opti: "Kaisei Opti", serif;
+  @keyframes meteor {
+    0% {
+      transform: rotate(-45deg) translateX(0);
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(-45deg) translateX(-1000px);
+      opacity: 0;
+    }
+  }
+  --animate-meteor-effect: meteor 5s linear infinite;
 }
 
 .izis-text-shadow {

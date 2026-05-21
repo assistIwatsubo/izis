@@ -26,7 +26,7 @@ function AppStart({
           - FIX THE UI -
         </p>
       </div>
-      <div className="flex flex-col lg:flex-row justify-center items-center gap-24">
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-12 py-12 lg:gap-24">
         <div className="bg-black/25 rounded-lg w-fit px-8 py-4 backdrop-blur-sm">
           <h2 className="text-center font-bold text-white py-2 text-[1.5rem] ">
             HOW TO PLAY
