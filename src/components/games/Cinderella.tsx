@@ -268,7 +268,7 @@ export function AdditionalPlan({ isFound }: { isFound: boolean }) {
 
 export function Appeal1({ isFound }: { isFound: boolean }) {
   return isFound ? (
-    <div className="flex flex-col gap-12 items-center justify-center pt-20 pb-32 bg-[linear-gradient(to_bottom,rgba(255,255,255,1),rgba(255,255,255,0.5)),url(./games/cinderella/bg-linen.webp)] bg-cover bg-bottom">
+    <div className="flex flex-col gap-12 items-center justify-center pt-20 pb-32 bg-[linear-gradient(to_bottom,rgba(255,255,255,1),rgba(255,255,255,0.5)),url(/games/cinderella/bg-linen.webp)] bg-cover bg-bottom">
       <p className="text-center max-w-240 w-full m-auto p-2 text-[2.25rem] font-shippori-mincho text-[#1F2937] font-extrabold">
         <span className="block font-bold mt-2 text-[1.5rem] leading-loose">
           フェアリーゴッドマザーと
