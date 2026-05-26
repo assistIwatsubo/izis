@@ -1,5 +1,9 @@
+import { useState } from "react";
 import { GAMES, type Game } from "../types/types";
 import ToggleSwitch from "../components/ToggleSwitch";
+import { Icon } from "@iconify/react";
+import Modal from "../components/Modal.tsx";
+
 
 type Props = {
   setScene: (scene: "START" | "GAME" | "RESULT") => void;
@@ -9,6 +13,7 @@ type Props = {
   setIsDebug: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
+
 function AppStart({
   setScene,
   activeGame,
@@ -16,8 +21,14 @@ function AppStart({
   isDebug,
   setIsDebug,
 }: Props) {
+
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  
   return (
     <section className="bg-[url('/izis-background.webp')] bg-cover bg-center min-h-screen flex flex-col justify-around px-4 py-12">
+      <button onClick={() => setIsOpen(true)} className="cursor-pointer fixed right-6 top-4">
+        <Icon icon="material-symbols:help-center-rounded" width="32" height="32" className="text-shadow-amber-700 text-white" />
+      </button>
       <div className="py-4">
         <h1 className="leading-tight text-center text-[10rem] font-black text-white izis-text-shadow">
           IZIS
@@ -75,6 +86,30 @@ function AppStart({
           </button>
         </div>
       </div>
+      {isOpen &&
+        <Modal onClose={() => setIsOpen(false)}>
+          <h2 className="font-black text-[4rem] text-center px-12 text-(--primary-color)">What is 'IZIS' ?</h2>
+          <span className="block text-center text-(--primary-color) font-bold text-[2rem]">- IZISとは？ -</span>
+          <div className="min-w-100 max-w-160 py-8 max-h-4/5 overflow-hidden">
+          <div className="max-h-80 overflow-y-scroll p-2">
+            <p className="tracking-wide">「IZIS」は、「悪いUIを良いUIに変える」がテーマの、ゲーム風SPAです。<br />
+            <br />
+            歴史あるUI/UXの改修に５年ほど関わってきた体験を何かのポートフォリオにまとめられないかと考え、制作しました。<br />
+            <br />
+            具体的などなたかの成果物を貶める意図は一切ありません。どちらかと言えば、私が自身のセンスを信じ切って作ったひどいものを、少しはモダンでマシでどことなく見たことがあるページデザインに変わるように作りました。<br />
+            くすっと笑っていただけたら幸いです。
+            </p>
+            <div className="p-4 bg-gray-100 mt-8 rounded-md">
+            <h3 className="text-center font-bold text-(--primary-color)">- 「IZIS」の由来 -</h3>
+            <p className="pt-2 text-[0.875rem] text-gray-800">「いずい」という方言があります。靴の中に小石が入ったときや、Tシャツのタグが背中をちくちく刺してくるときの居心地の悪さを表現する言葉だそうです。<br />
+            その「いずい」と英語の「is」を掛け合わせ、「いずいのは（どこ？）」という意味でつけました。
+            </p>
+            </div>
+          </div>
+          </div>
+         
+        </Modal>
+      }
     </section>
   );
 }
