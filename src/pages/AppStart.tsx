@@ -88,9 +88,9 @@ function AppStart({
       </div>
       {isOpen &&
         <Modal onClose={() => setIsOpen(false)}>
-          <h2 className="font-black text-[4rem] text-center px-12 text-(--primary-color)">What is 'IZIS' ?</h2>
-          <span className="block text-center text-(--primary-color) font-bold text-[2rem]">- IZISとは？ -</span>
-          <div className="min-w-100 max-w-160 py-8 max-h-4/5 overflow-hidden">
+          <h2 className="font-black text-[2.25rem] md:text-[4rem] text-center text-(--primary-color)">What is 'IZIS' ?</h2>
+          <span className="block text-center text-(--primary-color) font-bold text-[1.5rem] md:text-[2rem]">- IZISとは？ -</span>
+          <div className="md:min-w-100 max-w-160 py-8 max-h-4/5 overflow-hidden">
           <div className="max-h-80 overflow-y-scroll p-2">
             <p className="tracking-wide">「IZIS」は、「悪いUIを良いUIに変える」がテーマの、ゲーム風SPAです。<br />
             <br />
@@ -107,7 +107,6 @@ function AppStart({
             </div>
           </div>
           </div>
-         
         </Modal>
       }
     </section>
